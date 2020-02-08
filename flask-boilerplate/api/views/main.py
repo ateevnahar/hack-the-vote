@@ -1,19 +1,37 @@
-from flask import Blueprint, request
+import json
+
+from flask import Blueprint, request, render_template
 from api.models import db, Person, Email
 from api.core import create_response, serialize_list, logger
-from sqlalchemy import inspect
 
-main = Blueprint("main", __name__)  # initialize blueprint
+from sqlalchemy import inspect
+import os.path
+
+main = Blueprint("main", __name__, template_folder='templates', static_url_path='/%s', static_folder='static')  # initialize blueprint
 
 
 # function that is called when you visit /
 @main.route("/")
 def index():
-    # you are now in the current application context with the main.route decorator
-    # access the logger with the logger from api.core and uses the standard logging module
-    # try using ipdb here :) you can inject yourself
-    logger.info("Hello World!")
-    return "<h1>Hello World!</h1>"
+    return render_template("homepage/homepage.template.client.html")
+
+
+@main.route("/faq")
+def faq():
+    return render_template("faq/faq.homepage.html")
+
+
+@main.route("/candidates")
+def candidates():
+    return render_template("candidates/candidates.homepage.html")
+
+
+# function that is called when you visit /
+@main.route("/api/quiz_topics", methods=["GET"])
+def topics():
+    topics = ["Climate Change", "Immigration", "Terrorism", "Social Security and Medicare", "Student Loans", "Abortion",
+              "Gun Control", "Homelessness", "Unemployment"]
+    return json.dumps(topics)
 
 
 # function that is called when you visit /persons
@@ -27,7 +45,7 @@ def get_persons():
 @main.route("/make-persons", methods=["GET"])
 def create_person():
     data = request.get_json()
-    data = {"name":"john", "email":"email@gmail.com"}
+    data = {"name": "john", "email": "email@gmail.com"}
     logger.info("Data recieved: %s", data)
     if "name" not in data:
         msg = "No name provided for person."
