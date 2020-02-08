@@ -12,7 +12,7 @@ body {
 }
 
 body {
-  background: #63bdf7;
+  background: white;
   overflow: hidden;
 }
 
@@ -24,7 +24,7 @@ body {
   width: 36rem;
   height: 65rem;
   margin-left: -15.3rem;
-  margin-top: -37rem;
+  margin-top: -35rem;
   background: #f6f6f5;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
@@ -32,8 +32,9 @@ body {
 .demo__header .enviro{
     padding-top: 1.5rem;
     color: white;
-    background: #0B6623;
+    background: #00b894;
     height: 6rem;
+    border-radius: 2%;
 }
 
 .demo__header .healthcare{
@@ -41,13 +42,15 @@ body {
     color: white;
     background:blue;
     height: 6rem;
+    border-radius: 2%;
 }
 
 .demo__header .econ{
     padding-top: 1.5rem;
     color: white;
-    background: black;
+    background: #636e72;
     height: 6rem;
+    border-radius: 2%;
 }
 
 .demo__header .education{
@@ -55,6 +58,7 @@ body {
     color: white;
     background:orange;
     height: 6rem;
+    border-radius: 2%;
 }
 
 .demo__header .LGBTQ{
@@ -62,17 +66,19 @@ body {
     color: white;
     background:pink;
     height: 6rem;
+    border-radius: 2%;
 }
 
 .demo__content {
   overflow: hidden;
   position: relative;
-  height: 70rem;
-  padding-top: 1rem;
+  height: 67rem;
+  padding-top: 2rem;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+border-radius: 5%;
 }
 .demo__card-cont {
   position: relative;
@@ -126,56 +132,104 @@ body {
   padding-top: 1rem;
 }
 .demo__card__top.purple {
-  background: #0B6623;
+  background: white;
+  border-radius:5% 5% 0 0;
+  opacity: 95%;
 }
 .demo__card__top.blue {
-  background: #248cb6;
+  background: white;
+  border-radius:5% 5% 0 0;
+  opacity: 95%;
 }
 .demo__card__top.indigo {
-  background: #303f9f;
+  background: white;
+  border-radius:5% 5% 0 0;
+  opacity: 95%;
 }
 .demo__card__top.cyan {
-  background: #26c6da;
+  background: white;
+  border-radius:5% 5% 0 0;
+  opacity: 95%;
 }
 .demo__card__top.lime {
-  background: #afb42b;
+  background: white;
+  border-radius:5% 5% 0 0;
+  opacity: 95%;
 }
 .demo__card__top.brown {
-  background: #795548;
+  background: white;
+  border-radius:5% 5% 0 0;
+  opacity: 95%;
 }
 .demo__card__img1 {
   overflow: hidden;
   width: 30rem;
-  height: 35rem;
+  height: 30rem;
   margin: 0 auto 1.5rem;
-  background-image: url("https://content.fortune.com/wp-content/uploads/2016/01/gettyimages-492714600.jpg?resize=1500,1000");
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Bernie_Sanders_July_2019_retouched.jpg/1920px-Bernie_Sanders_July_2019_retouched.jpg");
   background-size: cover;
+  border-radius:4% 4% 4% 4% ;
 }
 .demo__card__img2 {
     overflow: hidden;
     width: 30rem;
-    height: 35rem;
+    height: 30rem;
     margin: 0 auto 1.5rem;
-    background-image: url("https://content.fortune.com/wp-content/uploads/2016/01/gettyimages-492714600.jpg?resize=1500,1000");
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Elizabeth_Warren%2C_official_portrait%2C_114th_Congress_%28cropped%29%283%29.jpg/1280px-Elizabeth_Warren%2C_official_portrait%2C_114th_Congress_%28cropped%29%283%29.jpg");
     background-size: cover;
+    border-radius:4% 4% 4% 4% ;
+    
   }
   .demo__card__img3 {
     overflow: hidden;
     width: 30rem;
-    height: 35rem;
+    height: 30rem;
     margin: 0 auto 1.5rem;
-    background-image: url("https://content.fortune.com/wp-content/uploads/2016/01/gettyimages-492714600.jpg?resize=1500,1000");
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/bf/Pete_Buttigieg_by_Gage_Skidmore.jpg");
     background-size: cover;
+    border-radius:4% 4% 4% 4% ;
+  }
+  .demo__card__img4 {
+    overflow: hidden;
+    width: 30rem;
+    height: 30rem;
+    margin: 0 auto 1.5rem;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Andrew_Yang_by_Gage_Skidmore.jpg/1280px-Andrew_Yang_by_Gage_Skidmore.jpg");
+    background-size: cover;
+    border-radius:4% 4% 4% 4% ;
+  }
+  .demo__card__img5 {
+    overflow: hidden;
+    width: 30rem;
+    height: 30rem;
+    margin: 0 auto 1.5rem;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Official_portrait_of_Vice_President_Joe_Biden.jpg/1920px-Official_portrait_of_Vice_President_Joe_Biden.jpg");
+    background-size: cover;
+    border-radius:4% 4% 4% 4% ;
+   
+  }
+  .demo__card__img6 {
+    overflow: hidden;
+    width: 30rem;
+    height: 30rem;
+    margin: 0 auto 1.5rem;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Donald_Trump_official_portrait.jpg/1920px-Donald_Trump_official_portrait.jpg");
+    background-size: cover;
+    border-radius:4% 4% 4% 4% ;
+
   }
 .demo__card__name {
-  text-align: center;
+  
   font-size: 2rem;
   font-weight: bold;
-  color: #fff;
+  color: #636e72;
+    margin-bottom: 10%;
 }
 .demo__card__btm {
-  height: 11.5rem;
+    margin-top: 2%;
+  height: 18.5rem;
   background: #ffffff;
+  border-radius:0 0 5% 5%;
 }
 .demo__card__we {
   text-align: center;
@@ -216,7 +270,7 @@ body {
   border-top-right-radius: 1.5rem;
 }
 .demo__card__choice.m--reject {
-  background: red;
+  background: #d63031;
 }
 .demo__card__choice.m--like {
   background: #b1da96;
@@ -239,3 +293,191 @@ body {
   text-align: center;
   font-size: 2.2rem;
 }
+
+.button_group{
+    margin-left: 7.5%;
+}
+
+.animate
+{
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+
+.action-button:active
+{
+	transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
+}
+
+.action-button
+{
+	position: relative;
+    padding: 10px 40px;
+    
+  margin: 0px 10px 10px 0px;
+  
+  float: left;
+	border-radius: 10px;
+	font-family: 'Pacifico', cursive;
+	font-size: 35px;
+	color: #FFF;
+	text-decoration: none;	
+}
+
+.back-button
+{
+	position: relative;
+    padding: 5px 15px;
+    
+  margin: 5px 10px 10px 0px;
+  font-weight: 200%;
+  float: left;
+	border-radius: 12px;
+	font-family: 'Pacifico';
+	font-size: 15px;
+	color: #FFF;
+	text-decoration: none;	
+}
+.gery
+{
+	background-color:#636e72;
+	border-bottom: 5px solid #2d3436;
+	text-shadow: 0px -2px #636e72;
+}
+
+.green
+{
+	background-color: #2fca6c;
+	border-bottom: 5px solid #669644;
+	text-shadow: 0px -2px #669644;
+}
+
+.red
+{
+	background-color: #d63031;
+	border-bottom: 5px solid #BD3E31;
+	text-shadow: 0px -2px #BD3E31;
+}
+
+/* 
+Design by echojanz: 
+http://dribbble.com/shots/1039179-Slide-Button?list=users
+*/
+
+/*
+Technical inspiration from tutorial by Hugo Giraudel:
+https://tympanus.net/codrops/2012/09/13/button-switches-with-checkboxes-and-css3-fanciness/
+*/
+
+/* Font Awesome */
+
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+
+
+
+/*---Switch styles---*/
+
+/* Checkbox hack */
+.switch input {
+	cursor: pointer;
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 100;
+}
+
+/* Container */
+.switch {
+	height: 45px;
+	margin: 5px auto;
+	position: absolute;;
+    width: 125px;
+    margin-left: 60%;
+}
+
+/* Background unchecked */
+.switch label {
+	background: #dfe6e9;
+  color: #c72f18;
+	border-radius: 2px;
+	display: block;
+	height: 100%;
+	position: relative;
+	transition: all .15s ease;
+  width: 100%;
+}
+
+/* Slider unchecked */
+.switch label div {
+	background: #b2bec3;
+	border-radius: 2px;
+	display: block;
+	height: 40px;
+    left: 4px;
+    right: 4px;
+	position: absolute;
+	top: 2px;
+	transition: all .15s ease;
+  width: 53px;
+	z-index: 3; 
+}
+
+/* Vertical lines on slider */
+.switch label div:before {
+	background: #d3d3d3;
+  bottom: 0;
+  box-shadow: -6px 0 0 0 #d3d3d3,
+				6px 0 0 0 #d3d3d3; 
+  content: '';
+	display: block;
+  height: 15px;
+	left: 0;
+	margin: auto;
+  position: absolute;
+  right: 0;
+	top: 0;
+  transition: all .15s ease;
+  width: 3px;
+}
+
+/* Icon styles */
+.switch .fontawesome-ok {
+  font-size: 28px;
+	left: 20px;
+	position: relative;
+  top: 13px;
+	z-index: 2;
+}
+.switch .fontawesome-remove {
+  font-size: 29px;
+	left: 51px;
+  position: relative;
+	top: 12px;
+	z-index: 2;
+}
+
+/* Checked States */
+.switch input:checked~label {
+	background: #b2bec3;
+  color: #13ad4f;
+}
+
+.switch input:checked~label div {
+	left: 67px;
+}
+
+.demo__card__blur.blur{
+    filter: blur(40px);
+  -webkit-filter: blur(40px);
+}
+
+.demo__card__name.blurtext{
+
+    color: transparent;
+ 
+}
+
