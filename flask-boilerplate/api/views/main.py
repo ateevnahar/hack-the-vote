@@ -14,7 +14,7 @@ main = Blueprint("main", __name__, template_folder='templates', static_url_path=
 # function that is called when you visit /
 @main.route("/")
 def index():
-    return render_template("homepage/homepage.template.client.html")
+    return render_template("login/login.template.client.html")
 
 
 @main.route("/faq")
