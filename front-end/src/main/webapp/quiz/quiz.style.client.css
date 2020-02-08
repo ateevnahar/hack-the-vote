@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 *,
 *:before,
 *:after {
@@ -240,7 +239,6 @@ body {
   text-align: center;
   font-size: 2.2rem;
 }
-=======
 .topdown {
     position: absolute;
     top:  25%;
@@ -267,4 +265,3 @@ body {
     left: 50%;
     transform: translate(-50%,-50%);
 }
->>>>>>> updates to quiz homepage
