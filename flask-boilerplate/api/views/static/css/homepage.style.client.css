@@ -1,0 +1,39 @@
+.body-courses {
+    background-color: lightgray;
+}
+
+.header-fun {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.dark-grey {color: black;}
+
+.navbar .wbdv-new-course {background-color: white;
+                    opacity: 50%;}
+
+.homepage-title { width: 30%;}
+
+.wd-top-right {
+	color: red; position: fixed;
+    top: 10px; right: 10px;}
+
+.wbdv-new-course::placeholder {
+    font-style: italic;
+}
+.no-border {
+    border: 0;
+    box-shadow: none;
+}
+
+.owner-field {
+    padding-left: 4%;
+}
+
+.course-title {
+    color: black;
+}
+
+.wd-bottom-right {
+	color: red; position: fixed;
+    bottom: 10px; right: 10px;}
