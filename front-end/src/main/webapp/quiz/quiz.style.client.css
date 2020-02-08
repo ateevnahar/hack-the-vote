@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *,
 *:before,
 *:after {
@@ -239,3 +240,31 @@ body {
   text-align: center;
   font-size: 2.2rem;
 }
+=======
+.topdown {
+    position: absolute;
+    top:  25%;
+    right: 0px;
+    left: 0px;
+}
+
+.text-mid {
+    text-align: center;
+}
+
+.zippy {
+    padding-left: 5%;
+}
+
+.coloa{
+    color: black;
+    background-color: black;
+}
+
+.faq {
+    position: absolute;
+    bottom:  2%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+>>>>>>> updates to quiz homepage
