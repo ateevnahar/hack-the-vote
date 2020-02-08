@@ -9,6 +9,15 @@
     text-align: center;
 }
 
+.zippy {
+    padding-left: 5%;
+}
+
+.coloa{
+    color: black;
+    background-color: black;
+}
+
 .faq {
     position: absolute;
     bottom:  2%;
