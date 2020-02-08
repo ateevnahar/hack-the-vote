@@ -56,7 +56,6 @@ def get_user():
 @main.route("/api/save_user", methods=["POST"])
 def save_user():
     data = request.form
-
     if "id" not in data:
         msg = "No id provided for person."
         logger.info(msg)
@@ -65,14 +64,13 @@ def save_user():
         msg = "No topics provided for person."
         logger.info(msg)
         return create_response(status=422, message=msg)
-
     new_person = Person(cookie=data["id"], saved_topics=[json.loads(data["topics"])])
 
     # commit it to database
     db.session.add_all([new_person])
     db.session.commit()
     return create_response(
-        message=f"Successfully created person {new_person.name} with id: {new_person.id}"
+        message=f"Successfully created person {new_person.cookie} with id: {new_person.id}"
     )
 
 
