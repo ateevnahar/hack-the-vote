@@ -1,7 +1,8 @@
 import json
 
-from flask import Blueprint, request, render_template
-from api.models import db, Person, Candidate
+import jsonpickle as jsonpickle
+from flask import Blueprint, request, render_template, json, Flask
+from api.models import db, Person, Candidate, GetData
 from api.core import create_response, serialize_list, logger
 
 from sqlalchemy import inspect
@@ -10,6 +11,10 @@ import os.path
 main = Blueprint("main", __name__, template_folder='templates', static_url_path='/%s',
                  static_folder='static')  # initialize blueprint
 
+data = GetData()
+
+topics = ["Climate Change", "Immigration", "Terrorism", "Social Security and Medicare", "Student Loans", "Abortion",
+              "Gun Control", "Homelessness", "Unemployment"]
 
 # function that is called when you visit /
 @main.route("/")
@@ -31,14 +36,15 @@ def candidates():
 def quiz():
     return render_template("quiz/quiz.html")
 
+
 @main.route("/quizhomepage")
 def quizhome():
     return render_template("quiz/quizhomepage.html")
 
+
 @main.route("/api/quiz_topics", methods=["GET"])
 def topics():
-    topics = ["Climate Change", "Immigration", "Terrorism", "Social Security and Medicare", "Student Loans", "Abortion",
-              "Gun Control", "Homelessness", "Unemployment"]
+
     return json.dumps(topics)
 
 
@@ -75,11 +81,11 @@ def get_persons():
     return create_response(data={"persons": serialize_list(persons)})
 
 
-
 @main.route("/api/update_candidate", methods=["GET"])
 def update_candidate():
     candidate = Candidate.query.filter_by(id=request.args.get('id')).first()
     return render_template("manual/updateCandidate.html", data=candidate)
+
 
 @main.route("/api/update_candidate", methods=["POST"])
 def update_candidate_post():
@@ -93,16 +99,10 @@ def update_candidate_post():
     candidate.vote_history = json.loads(request.form["vote_history"])
     candidate.image_link = request.form["image_link"]
 
-
     db.session.commit()
     return create_response(
         message=f"Successfully edited person {candidate.name}"
     )
-
-
-
-
-
 
 
 @main.route("/api/save_candidate", methods=["GET"])
@@ -128,9 +128,6 @@ def save_candidate():
     )
 
 
-
-
-
 # function that is called when you visit /persons
 @main.route("/api/candidates", methods=["GET"])
 def get_candidates():
@@ -138,3 +135,19 @@ def get_candidates():
     return create_response(data={"candidates": serialize_list(candidates)})
 
 
+@main.route("/analyze", methods=["GET"])
+def anaylze_data():
+    name = request.args.get('name')
+    if name is None:
+        msg = "No name provided for search."
+        logger.info(msg)
+        return create_response(status=422, message=msg)
+    lines = data.headlines(name)
+    output = data.analyze_headline(lines)
+
+    response = Flask.response_class(
+        response=jsonpickle.encode(output),
+        status=200,
+        mimetype='application/json'
+    )
+    return response
