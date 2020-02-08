@@ -6,25 +6,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Profile</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="quiz.style.client.css" rel="stylesheet" />
 </head>
 
 <body>
-  <div class="container">
-    <h1>Welcome to hack-the-vote QUIZ</h1>
- 
-    <div class="row">
-      <div class="col-5">
-        <button onclick="location.href = '../login/login.template.client.html';" id="takeQuiz"
-        class="btn btn-primary btn-block">back to home</button>
-      </div>
-      <div class="col-7">
-        <a href="#" class="float">
-          <h3>FAQ</h3>
-        </a>
-      </div>
+<div class="container-fluid">
+  <div class="topdown">
+  <h3>Welcome to hack-the-vote QUIZ</h3>
+  <div class="form-group row">
+    <label for="Zipcode" class="col-2 col-form-label zippy">
+      Zipcode: </label>
+    <div class="col-8">
+      <input class="form-control" id="Zipcode" placeholder="05403">
+    </div>
+    <div class="col-2">
     </div>
   </div>
+  <div class="form-group row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <button onclick="location.href = 'next-page';" id="next-step"
+        class="btn btn-success btn-block">Submit</button>
+    </div>
+    <div class="col-2"></div>
   </div>
+  <div class="form-group row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <button onclick="location.href = '../login/login.template.client.html';" id="takeQuiz"
+        class="btn btn-danger btn-block">back to home</button>
+    </div>
+    <div class="col-2"></div>
+  </div>
+</div>
+  <div class="form-group row">
+    <div class="col-12 faq">
+      <a href="#">
+        <h3 class="text-mid">FAQ</h3>
+      </a>
+    </div>
+  </div>
+</div>
 
 </body>
 
