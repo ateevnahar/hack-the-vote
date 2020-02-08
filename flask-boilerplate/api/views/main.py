@@ -31,10 +31,9 @@ def candidates():
 def quiz():
     return render_template("quiz/quiz.html")
 
-@main.route("/quiz.homepage")
-def quiz-home():
-    return render_template("quiz/quiz.homepage.html")
-
+@main.route("/quizhomepage")
+def quizhome():
+    return render_template("quiz/quizhomepage.html")
 
 @main.route("/api/quiz_topics", methods=["GET"])
 def topics():
