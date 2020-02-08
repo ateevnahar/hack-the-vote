@@ -49,14 +49,14 @@ def get_user():
 
 @main.route("/api/save_user", methods=["POST"])
 def save_user():
-    data = request.get_json()
+    data = request.form
     new_person = Person(cookie=data["id"], saved_topics=[json.loads(data["topics"])])
 
     # commit it to database
     db.session.add_all([new_person])
     db.session.commit()
     return create_response(
-        message=f"Successfully created person {new_person.name} with id: {new_person.id}"
+        message=f"Successfully created person {new_person.cookie} with id: {new_person.id}"
     )
 
 
