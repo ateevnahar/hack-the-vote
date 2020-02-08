@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>User Admin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="user-admin.style.client.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div="container-fluid">
+        <h1 class="form-group wbdv-title wbdv-header">User Admin</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Role</th>
+                    <th>&nbsp;</th>
+                </tr>
+
+                <tr class="wbdv-form">
+                    <td><input id="usernameFld" class="form-control" placeholder="Username" /></td>
+                    <td><input id="passwordFld" class="form-control" placeholder="Password" /></td>
+                    <td><input id="firstNameFld" class="form-control" placeholder="First Name" /></td>
+                    <td><input id="lastNameFld" class="form-control" placeholder="Last Name" /></td>
+                    <td><select id="roleFld" class="form-control">
+                            <option value="FACULTY">Faculty</option>
+                            <option value="STUDENT">Student</option>
+                            <option value="ADMIN">Admin</option>
+                        </select></td>
+                    <td><span class="float-right" style="white-space: nowrap">
+                            <i class="fa-2x fa fa-search wbdv-search"></i>
+                            <i class="fa-2x fa fa-plus wbdv-create" id="createBtn"></i>
+                            <i class="fa-2x fa fa-check wbdv-update" id="updateBtn"></i>
+                        </span></td>
+                </tr>
+            <tbody class="wbdv-tbody" id="userList">
+               
+                    
+            </tbody>
+        </table>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="../services/user.service.client.js"></script>
+        <script src="user-admin.controller.client.js"></script>
+        </div>
+</body>
+
+</html>
