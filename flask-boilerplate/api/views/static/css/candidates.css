@@ -22,8 +22,20 @@
     padding-left: 5%;
 }
 
+.spacer {
+    margin-top: 5%;
+    padding-top: 5%;
+}
+
 .faq {
     position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.faq-cards {
+    position: relative;
     bottom: 2%;
     left: 50%;
     transform: translate(-50%, -50%);
