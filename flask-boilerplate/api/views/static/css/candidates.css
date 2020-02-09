@@ -5,6 +5,14 @@
     left: 0px;
 }
 
+.title-loc {
+    position: absolute;
+    top:  2%;
+    right: 0px;
+    left: 0px;
+}
+
+
 .text-mid {
     text-align: center;
 }
