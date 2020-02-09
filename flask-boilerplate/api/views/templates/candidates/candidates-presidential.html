@@ -11,38 +11,37 @@
 
 <body>
   <div class="container-fluid">
-    <div class="topdown text-mid">
-    <h3> Find your candidate!</h3>
-    <div class="form-group row">
-      <label for="Zipcode" class="col-2 col-form-label zippy">
-        Zipcode: </label>
-      <div class="col-8">
-        <input class="form-control" id="Zipcode" placeholder="05403">
+    <div class="title-loc text-mid">
+      <h3> Presidential Candidates! </h3>
+      <div class="container-fluid">
+        <div class="row">
+          <div className="card col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+            <div class="card">
+              <img src="https://www.sanders.senate.gov/imo/media/image/Sanders_Headshot.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
+
+      <div class="form-group row">
+        <div class="col-2"></div>
+        <div class="col-8">
+          <a href="{{url_for('main.quiz')}}" id="next-step" class="btn btn-primary btn-block">Click to Swipe
+            through!</a>
+        </div>
+        <div class="col-2"></div>
+      </div>
+    </div>
+    <div class="form-group row">
       <div class="col-2">
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-2"></div>
-      <div class="col-8">
-        <a href="{{url_for('main.quiz')}}" id="next-step"
-          class="btn btn-success btn-block">Find Local Candidates</a>
-      </div>
-      <div class="col-2"></div>
-    </div>
-    <div class="form-group row">
-      <div class="col-2"></div>
-      <div class="col-8">
-        <a href="{{url_for('main.quiz')}}" id="next-step"
-          class="btn btn-primary btn-block">Presidential Candidates</a>
-      </div>
-      <div class="col-2"></div>
-    </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-2">
-          <a href = "{{url_for('main.index')}}" class="btn back-button shadow animate gery">
-      &#8592</a>
+        <a href="{{url_for('main.index')}}" class="btn back-button shadow animate gery">
+          &#8592</a>
       </div>
       <div class="col-10">
       </div>
@@ -57,6 +56,6 @@
     </div>
   </div>
 
-  </body>
+</body>
 
-  </html>
+</html>
