@@ -50,6 +50,14 @@ def get_user():
 @main.route("/api/save_user", methods=["POST"])
 def save_user():
     data = request.form
+    if "id" not in data:
+        msg = "No id provided for person."
+        logger.info(msg)
+        return create_response(status=422, message=msg)
+    if "topics" not in data:
+        msg = "No topics provided for person."
+        logger.info(msg)
+        return create_response(status=422, message=msg)
     new_person = Person(cookie=data["id"], saved_topics=[json.loads(data["topics"])])
 
     # commit it to database
@@ -61,35 +69,72 @@ def save_user():
 
 
 # function that is called when you visit /persons
-@main.route("/persons", methods=["GET"])
+@main.route("/api/persons", methods=["GET"])
 def get_persons():
     persons = Person.query.all()
     return create_response(data={"persons": serialize_list(persons)})
 
 
-# POST request for /persons
-@main.route("/make-persons", methods=["GET"])
-def create_person():
-    data = request.get_json()
-    data = {"name": "john", "email": "email@gmail.com"}
-    logger.info("Data recieved: %s", data)
-    if "name" not in data:
-        msg = "No name provided for person."
-        logger.info(msg)
-        return create_response(status=422, message=msg)
-    if "email" not in data:
-        msg = "No email provided for person."
-        logger.info(msg)
-        return create_response(status=422, message=msg)
 
-    # create SQLAlchemy Objects
-    new_person = Person(name=data["name"])
-    email = Candidate(email=data["email"])
-    new_person.emails.append(email)
+@main.route("/api/update_candidate", methods=["GET"])
+def update_candidate():
+    candidate = Candidate.query.filter_by(id=request.args.get('id')).first()
+    return render_template("manual/updateCandidate.html", data=candidate)
 
-    # commit it to database
-    db.session.add_all([new_person, email])
+@main.route("/api/update_candidate", methods=["POST"])
+def update_candidate_post():
+    candidate = Candidate.query.filter_by(id=request.args.get('id')).first()
+
+    candidate.id = request.form["id"]
+    candidate.name = request.form["name"]
+    candidate.website = request.form["website"]
+    candidate.issues = json.loads(request.form["issues"])
+    candidate.articles = json.loads(request.form["articles"])
+    candidate.vote_history = json.loads(request.form["vote_history"])
+    candidate.image_link = request.form["image_link"]
+
+
     db.session.commit()
     return create_response(
-        message=f"Successfully created person {new_person.name} with id: {new_person.id}"
+        message=f"Successfully edited person {candidate.name}"
     )
+
+
+
+
+
+
+
+@main.route("/api/save_candidate", methods=["GET"])
+def get_candidate():
+    return render_template("manual/addCandidate.html")
+
+
+@main.route("/api/save_candidate", methods=["POST"])
+def save_candidate():
+    data = request.form
+    if "name" not in data:
+        msg = "No id provided for person."
+        logger.info(msg)
+        return create_response(status=422, message=msg)
+
+    new_candidate = Candidate(name=data["name"])
+
+    # commit it to database
+    db.session.add_all([new_candidate])
+    db.session.commit()
+    return create_response(
+        message=f"Successfully created person {new_candidate.name} with id: {new_candidate.id}"
+    )
+
+
+
+
+
+# function that is called when you visit /persons
+@main.route("/api/candidates", methods=["GET"])
+def get_candidates():
+    candidates = Candidate.query.all()
+    return create_response(data={"candidates": serialize_list(candidates)})
+
+
