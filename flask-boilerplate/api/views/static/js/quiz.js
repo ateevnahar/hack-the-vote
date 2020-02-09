@@ -128,8 +128,46 @@ $(document).ready(function () {
 
     //pull data from backend base on quiz result
 
-    //matching part 
+    //matching part
+    for(let i = 1; i < 7; i++) {
+        let link = "";
+        console.log($("#name"+i).text()+ " "+i);
+        let name = $("#name"+i).text();
+        switch (name) {
+            case "Donald Trump":{
+                link = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Donald_Trump_2013_cropped_more.jpg/220px-Donald_Trump_2013_cropped_more.jpg";
+                break;
+            }
+            case "Elizabeth Warren":{
+                link = "https://duckduckgo.com/i/8d73105e.jpg";
+                break;
+            }
+            case "Bernie Sanders":{
+                link = "https://duckduckgo.com/i/e8cc1898.jpg";
+                break;
+            }
+            case "Joe Biden":{
+                link = "https://duckduckgo.com/i/e8cc1898.jpg";
+                break;
+            }
+            case "Pete Buttigieg":{
+                link = "https://duckduckgo.com/i/1663508a.jpg";
+                break;
+            }
+            case "Michael Bloomberg":{
+                link = "https://duckduckgo.com/i/e8984e57.jpg";
+                break;
+            }
+            default: {
+                link = "";
+                break;
+            }
 
+        }
+        console.log(link);
+        console.log($(".demo__card__img"+i));
+        $(".demo__card__img"+i).css("background-image","url("+link+")");
+    }
 });
 
 
