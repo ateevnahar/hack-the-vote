@@ -6,6 +6,13 @@
     left: 0px;
 }
 
+.spacer {
+  margin-top: 5%;
+  padding-top: 5%;
+  position: relative;
+  z-index: 100;
+}
+
 .text-mid {
     text-align: center;
 }
@@ -19,6 +26,7 @@
 
 .helloworld{
     margin-top: 140%;
+    z-index: 1;
 }
 
 
@@ -223,8 +231,3 @@
   .wing:nth-child(7) {
     transform: rotate(315deg);
   }
-  
-  
-  
- 
-  
