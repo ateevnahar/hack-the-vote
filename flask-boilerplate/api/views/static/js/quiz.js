@@ -9,6 +9,10 @@ $(document).ready(function () {
     let deg = 0;
     let $card, $cardReject, $cardLike;
     let i = 0;
+    let like = [];
+    let dislike = [];
+    let index = 0;
+
 
     //smily/sad face showing after pull
     function pullChange() {
@@ -40,8 +44,13 @@ $(document).ready(function () {
                 $card.addClass("below").removeClass("inactive to-left to-right");
                 cardsCounter++;
                 if (cardsCounter === numOfCards) {
-                    cardsCounter = 0;
-                    $(".demo__card").removeClass("below");
+                    //cardsCounter = 0;
+                    //$(".demo__card").removeClass("below");
+                    localStorage.setItem("like", JSON.stringify(like));
+                    localStorage.setItem("dislike", JSON.stringify(dislike));
+                    window.location.href = '/matches';
+                    //console.log(like);
+                    //console.log(dislike);
                 }
             }, 300);
         }
@@ -86,7 +95,8 @@ $(document).ready(function () {
     });
 
     $(".red").click(function () {
-
+        dislike[index] =  $("#name"+index).text();
+        index++;
         $cards = $(".demo__card:not(.below)");
         $card = $cards.last();
         $cardReject = $(".demo__card__choice.m--reject", $card);
@@ -98,7 +108,8 @@ $(document).ready(function () {
 
     //click link button 
     $(".green").click(function () {
-
+        like[index] =  $("#name"+index).text();;
+        index++;
         $cards = $(".demo__card:not(.below)");
         $card = $cards.last();
         $cardReject = $(".demo__card__choice.m--reject", $card);
@@ -129,9 +140,9 @@ $(document).ready(function () {
     //pull data from backend base on quiz result
 
     //matching part
-    for(let i = 1; i < 7; i++) {
+    for(let i = 0; i < 7; i++) {
         let link = "";
-        console.log($("#name"+i).text()+ " "+i);
+        //console.log($("#name"+i).text()+ " "+i);
         let name = $("#name"+i).text();
         switch (name) {
             case "Donald Trump":{
@@ -147,7 +158,7 @@ $(document).ready(function () {
                 break;
             }
             case "Joe Biden":{
-                link = "https://duckduckgo.com/i/e8cc1898.jpg";
+                link = "https://miro.medium.com/fit/c/256/256/1*12QebBEwpcHMg_xuaJ5MrQ.jpeg";
                 break;
             }
             case "Pete Buttigieg":{
@@ -164,11 +175,13 @@ $(document).ready(function () {
             }
 
         }
-        console.log(link);
-        console.log($(".demo__card__img"+i));
+        //console.log(link);
+        //console.log($(".demo__card__img"+i));
         $(".demo__card__img"+i).css("background-image","url("+link+")");
     }
 });
+
+
 
 
 
