@@ -25,8 +25,9 @@ body {
   height: 65rem;
   margin-left: -15.3rem;
   margin-top: -35rem;
-  background: #f6f6f5;
+  background-color: white;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  
 }
 
 .demo__header .enviro{
@@ -72,7 +73,7 @@ body {
 .demo__content {
   overflow: hidden;
   position: relative;
-  height: 67rem;
+  height: 59.8rem;
   padding-top: 2rem;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -95,8 +96,8 @@ border-radius: 5%;
   height: 100%;
   -webkit-transform-origin: 50% 100%;
           transform-origin: 50% 100%;
-}
 
+}
 .demo__card.reset {
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
@@ -128,101 +129,122 @@ border-radius: 5%;
   z-index: 1;
 }
 .demo__card__top {
-  height: 35.5rem;
+  height: 20.5rem;
   padding-top: 1rem;
 }
-.demo__card__top.purple {
+.demo__card__top_white {
   background: white;
   border-radius:5% 5% 0 0;
-  opacity: 95%;
+  opacity: 100%;
 }
-.demo__card__top.blue {
-  background: white;
-  border-radius:5% 5% 0 0;
-  opacity: 95%;
-}
-.demo__card__top.indigo {
-  background: white;
-  border-radius:5% 5% 0 0;
-  opacity: 95%;
-}
-.demo__card__top.cyan {
-  background: white;
-  border-radius:5% 5% 0 0;
-  opacity: 95%;
-}
-.demo__card__top.lime {
-  background: white;
-  border-radius:5% 5% 0 0;
-  opacity: 95%;
-}
-.demo__card__top.brown {
-  background: white;
-  border-radius:5% 5% 0 0;
-  opacity: 95%;
-}
+
 .demo__card__img1 {
   overflow: hidden;
   width: 30rem;
-  height: 30rem;
+  height: 45rem;
   margin: 0 auto 1.5rem;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Bernie_Sanders_July_2019_retouched.jpg/1920px-Bernie_Sanders_July_2019_retouched.jpg");
+  background-image: url("https://www.cpacanada.ca/-/media/site/operational/sc-strategic-communications/images/g10438-sc.jpg");
   background-size: cover;
   border-radius:4% 4% 4% 4% ;
+  background-position-x: 25%;
 }
 .demo__card__img2 {
     overflow: hidden;
     width: 30rem;
-    height: 30rem;
+    height: 45rem;
     margin: 0 auto 1.5rem;
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Elizabeth_Warren%2C_official_portrait%2C_114th_Congress_%28cropped%29%283%29.jpg/1280px-Elizabeth_Warren%2C_official_portrait%2C_114th_Congress_%28cropped%29%283%29.jpg");
+    background-image: url("https://fee.org/media/17410/us_immigration.jpg?anchor=center&mode=crop&width=1920&rnd=131303470440000000");
     background-size: cover;
     border-radius:4% 4% 4% 4% ;
-    
+    background-position-x: 20%;
   }
   .demo__card__img3 {
     overflow: hidden;
     width: 30rem;
-    height: 30rem;
+    height: 45rem;
     margin: 0 auto 1.5rem;
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/bf/Pete_Buttigieg_by_Gage_Skidmore.jpg");
+    background-image: url("https://www.healthcarefinancenews.com/sites/healthcarefinancenews.com/files/styles/companion_top/public/hospital-bills712_0.jpg?itok=lHjtLGTv");
     background-size: cover;
     border-radius:4% 4% 4% 4% ;
+    background-position-x: 25%;
+   
   }
   .demo__card__img4 {
     overflow: hidden;
     width: 30rem;
-    height: 30rem;
+    height: 45rem;
     margin: 0 auto 1.5rem;
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Andrew_Yang_by_Gage_Skidmore.jpg/1280px-Andrew_Yang_by_Gage_Skidmore.jpg");
+    background-image: url("https://static.allongeorgia.com/wp-content/uploads/2018/09/student-loans.jpg");
     background-size: cover;
     border-radius:4% 4% 4% 4% ;
+    background-position-x: 42%;
   }
   .demo__card__img5 {
     overflow: hidden;
     width: 30rem;
-    height: 30rem;
+    height: 45rem;
     margin: 0 auto 1.5rem;
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Official_portrait_of_Vice_President_Joe_Biden.jpg/1920px-Official_portrait_of_Vice_President_Joe_Biden.jpg");
+    background-image: url("https://www.ozy.com/wp-content/uploads/2019/09/t-t-k-gettyimages692684784.jpg?w=1600&h=900&crop=1");
     background-size: cover;
     border-radius:4% 4% 4% 4% ;
-   
+    background-position-x: 45%;
   }
   .demo__card__img6 {
     overflow: hidden;
     width: 30rem;
-    height: 30rem;
+    height: 45rem;
     margin: 0 auto 1.5rem;
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Donald_Trump_official_portrait.jpg/1920px-Donald_Trump_official_portrait.jpg");
+    background-image: url("https://d97yz4wvpgciz.cloudfront.net/remote.axd?https://d3uwh8jpzww49g.cloudfront.net/sharedmedia/1510902/research-study.jpg?preset=article");
+    background-size: cover;
+    border-radius:4% 4% 4% 4% ;
+    background-position-x: 45%;
+  }
+  .demo__card__img7 {
+    overflow: hidden;
+    width: 30rem;
+    height: 45rem;
+    margin: 0 auto 1.5rem;
+    background-image: url("https://shepherdexpress.com/downloads/38076/download/lgbtqpov.jpg?cb=294b5b3a9f2dbed5c2994e0972153a26&w=800&h=");
+    background-size: cover;
+    border-radius:4% 4% 4% 4% ;
+    background-position-x: 10%;
+  }
+  .demo__card__img8 {
+    overflow: hidden;
+    width: 30rem;
+    height: 45rem;
+    margin: 0 auto 1.5rem;
+    background-image: url("https://nationalinterest.org/sites/default/files/styles/desktop__1260_/public/main_images/RTS2YJXJ%20%281%29.jpg?itok=jjgOzZ0f");
+    background-size: cover;
+    border-radius:4% 4% 4% 4% ;
+    background-position-x: 20%;
+
+  }
+  .demo__card__img9 {
+    overflow: hidden;
+    width: 30rem;
+    height: 45rem;
+    margin: 0 auto 1.5rem;
+    background-image: url("http://blogs.worldbank.org/sites/default/files/blogs-images/2019-09/digital_agriculture3.jpg");
     background-size: cover;
     border-radius:4% 4% 4% 4% ;
 
   }
+  .demo__card__img10 {
+    overflow: hidden;
+    width: 30rem;
+    height: 45rem;
+    margin: 0 auto 1.5rem;
+    background-image: url("https://i.hurimg.com/i/hdn/75/0x0/5da425cc0f25441cf4279f1d.jpg");
+    background-size: cover;
+    border-radius:4% 4% 4% 4% ;
+    background-position-x: 40%;
+  }
 .demo__card__name {
   
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: bold;
-  color: #636e72;
+  color: #000000;
     margin-bottom: 10%;
 }
 .demo__card__btm {
@@ -234,7 +256,7 @@ border-radius: 5%;
 .demo__card__we {
   text-align: center;
   font-size: 2.2rem;
-  line-height: 11.5rem;
+  line-height: 10.5rem;
 }
 .demo__card__choice {
   position: absolute;
@@ -295,7 +317,9 @@ border-radius: 5%;
 }
 
 .button_group{
-    margin-left: 7.5%;
+    margin: 7.5%;
+    
+    justify-content: center;
 }
 
 .animate
@@ -314,13 +338,13 @@ border-radius: 5%;
 .action-button
 {
 	position: relative;
-    padding: 10px 40px;
+    padding: 15px 16px;
     
-  margin: 0px 10px 10px 0px;
+    margin-right: 5px;
   
-  float: left;
+  float: center;
 	border-radius: 10px;
-	font-family: 'Pacifico', cursive;
+	font-family: 'Pacifico';
 	font-size: 35px;
 	color: #FFF;
 	text-decoration: none;	
@@ -335,7 +359,7 @@ border-radius: 5%;
   font-weight: 200%;
   float: left;
 	border-radius: 12px;
-	font-family: 'Pacifico';
+	font-family: 'arial black';
 	font-size: 15px;
 	color: #FFF;
 	text-decoration: none;	
@@ -347,137 +371,54 @@ border-radius: 5%;
 	text-shadow: 0px -2px #636e72;
 }
 
-.green
+.threegreen
 {
-	background-color: #2fca6c;
+	background-color: #E2D456;
 	border-bottom: 5px solid #669644;
-	text-shadow: 0px -2px #669644;
+	text-shadow: 0px -2px #E2D456;
 }
 
-.red
+.twored
 {
-	background-color: #d63031;
-	border-bottom: 5px solid #BD3E31;
-	text-shadow: 0px -2px #BD3E31;
+	background-color: #E5A74B;
+	border-bottom: 5px solid #E58152;
+	text-shadow: 0px -2px #E5A74B;
 }
 
-/* 
-Design by echojanz: 
-http://dribbble.com/shots/1039179-Slide-Button?list=users
-*/
-
-/*
-Technical inspiration from tutorial by Hugo Giraudel:
-https://tympanus.net/codrops/2012/09/13/button-switches-with-checkboxes-and-css3-fanciness/
-*/
-
-/* Font Awesome */
-
-@import url(http://weloveiconfonts.com/api/?family=fontawesome);
-
-
-
-
-/*---Switch styles---*/
-
-/* Checkbox hack */
-.switch input {
-	cursor: pointer;
-	height: 100%;
-	opacity: 0;
-	position: absolute;
-	width: 100%;
-	z-index: 100;
+.mostred
+{
+    
+    background-color: #E58152;
+	border-bottom: 5px solid rgb(209, 69, 54);
+	text-shadow: 0px -2px #E5A74B;
+}
+.fourgreen{
+    background-color: #B7DB55;
+	border-bottom: 5px solid #669644;
+	text-shadow: 0px -2px #B7DB55;
+}
+.mostgreen 
+{
+    background-color: #70DB55;
+	border-bottom: 5px solid #669644;
+	text-shadow: 0px -2px #70DB55;
+}
+.text{
+   
+}
+.t1{
+    float:left;
+    margin-left: 210px;
+    font-size: 20px;
+    font-weight: 20px;
+}
+.t2{
+    
+    float:left;
+    margin-left: -200px;
+    font-size: 20px;
+    font-weight: 20px;
 }
 
-/* Container */
-.switch {
-	height: 45px;
-	margin: 5px auto;
-	position: absolute;;
-    width: 125px;
-    margin-left: 60%;
-}
 
-/* Background unchecked */
-.switch label {
-	background: #dfe6e9;
-  color: #dfe6e9;
-	border-radius: 2px;
-	display: block;
-	height: 100%;
-	position: relative;
-	transition: all .15s ease;
-  width: 100%;
-}
-
-/* Slider unchecked */
-.switch label div {
-	background: white;
-	border-radius: 2px;
-	display: block;
-	height: 40px;
-    left: 4px;
-    right: 4px;
-	position: absolute;
-	top: 2px;
-	transition: all .15s ease;
-  width: 53px;
-	z-index: 3; 
-}
-
-/* Vertical lines on slider */
-.switch label div:before {
-	background: #d3d3d3;
-  bottom: 0;
-  box-shadow: -6px 0 0 0 #d3d3d3,
-				6px 0 0 0 #d3d3d3; 
-  content: '';
-	display: block;
-  height: 15px;
-	left: 0;
-	margin: auto;
-  position: absolute;
-  right: 0;
-	top: 0;
-  transition: all .15s ease;
-  width: 3px;
-}
-
-/* Icon styles */
-.switch .fontawesome-ok {
-  font-size: 25px;
-	left: 4px;
-	position: relative;
-  top: 1px;
-	z-index: 2;
-}
-.switch .fontawesome-remove {
-  font-size: 29px;
-	left: 51px;
-  position: relative;
-	top: 12px;
-	z-index: 2;
-}
-
-/* Checked States */
-.switch input:checked~label {
-	background: #b2bec3;
-  color: white;
-}
-
-.switch input:checked~label div {
-	left: 67px;
-}
-
-.demo__card__blur.blur{
-    filter: blur(40px);
-  -webkit-filter: blur(40px);
-}
-
-.demo__card__name.blurtext{
-
-    color: transparent;
- 
-}
 
