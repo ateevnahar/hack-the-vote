@@ -1,4 +1,5 @@
 .topdown {
+    margin-top: 80%;
     position: absolute;
     top: 25%;
     right: 0px;
@@ -15,3 +16,215 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.helloworld{
+    margin-top: 140%;
+}
+
+
+ /****** Mixins ******/
+/****** Mixins END ******/
+/****** Variables ******/
+/***** Variable END ******/
+
+ 
+  @-webkit-keyframes scale {
+    0% {
+      transform: scale(0.93, 0.93);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+  @keyframes scale {
+    0% {
+      transform: scale(0.93, 0.93);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+  .outter {
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    z-index: initial;
+    background-color: #C3E3F0;
+    animation: rotate 22s infinite linear;
+  }
+  @-webkit-keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .inner {
+    position: absolute;
+    top: 170px;
+    left: 170px;
+    height: 260px;
+    width: 260px;
+    background-color: #1D3E7A;
+    border-radius: 50%;
+    z-index: 1;
+    transform: scale(1, 1);
+    animation: scale-inner 2s infinite alternate ease-in-out;
+  }
+  @-webkit-keyframes scale-inner {
+    100% {
+      transform: scale(1.04, 1.04);
+    }
+  }
+  @keyframes scale-inner {
+    100% {
+      transform: scale(1.04, 1.04);
+    }
+  }
+  .inner-vote {
+    position: absolute;
+    top: 26px;
+    left: 28px;
+    height: 205px;
+    width: 205px;
+    background-color: #2161DF;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: inner-vote 2s infinite alternate ease-in-out backwards;
+  }
+  @-webkit-keyframes inner-vote {
+    100% {
+      transform: scale(1.025, 1.025);
+    }
+  }
+  @keyframes inner-vote {
+    100% {
+      transform: scale(1.025, 1.025);
+    }
+  }
+  .vote {
+    position: absolute;
+    display: inline-block;
+    top: 270px;
+    left: 214px;
+    z-index: 2;
+    transform: scale(1.08, 1.08);
+    animation: vote 2s infinite alternate ease-in-out;
+  }
+  @-webkit-keyframes vote {
+    100% {
+      -webkit-transform: scale(1, 1);
+      transform: scale(1, 1);
+    }
+  }
+  @keyframes vote {
+    100% {
+      -webkit-transform: scale(1, 1);
+      transform: scale(1, 1);
+    }
+  }
+  .vote h1 {
+    line-height: 20px;
+    color: #fff;
+    font-family: Verdana;
+    font-size: 55px;
+    font-weight: 900;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .flag {
+    position: absolute;
+    top: 125px;
+    height: 100px;
+    width: 40px;
+    background-color: #F25268;
+  }
+  .flag span:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 40px;
+    height: 100px;
+    width: 42px;
+    background-color: #fff;
+  }
+  .flag span:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 82px;
+    height: 100px;
+    width: 43px;
+    background-color: #F25268;
+  }
+  .flag span em:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 125px;
+    height: 100px;
+    width: 40px;
+    background-color: #fff;
+  }
+  .flag span em:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 165px;
+    height: 100px;
+    width: 45px;
+    background-color: #F25268;
+  }
+  
+  .wing {
+    position: absolute;
+    top: 150px;
+    left: 75px;
+    border-bottom: 600px solid #d7f0fa;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    height: 0;
+    width: 50px;
+    z-index: -3;
+    transform-origin: top;
+  }
+  .wing:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  .wing:nth-child(2) {
+    transform: rotate(90deg);
+  }
+  .wing:nth-child(3) {
+    transform: rotate(135deg);
+  }
+  .wing:nth-child(4) {
+    transform: rotate(180deg);
+  }
+  .wing:nth-child(5) {
+    transform: rotate(225deg);
+  }
+  .wing:nth-child(6) {
+    transform: rotate(270deg);
+  }
+  .wing:nth-child(7) {
+    transform: rotate(315deg);
+  }
+  
+  
+  
+ 
+  

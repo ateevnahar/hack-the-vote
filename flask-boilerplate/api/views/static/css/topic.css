@@ -12,7 +12,7 @@ body {
 }
 
 body {
-  background: white;
+  background: #cacaca;
   overflow: hidden;
 }
 
@@ -25,50 +25,11 @@ body {
   height: 65rem;
   margin-left: -15.3rem;
   margin-top: -35rem;
-  background-color: white;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  background-color: #cacaca;
+  border-radius: 5px;
   
 }
 
-.demo__header .enviro{
-    padding-top: 1.5rem;
-    color: white;
-    background: #00b894;
-    height: 6rem;
-    border-radius: 2%;
-}
-
-.demo__header .healthcare{
-    padding-top: 1.5rem;
-    color: white;
-    background:blue;
-    height: 6rem;
-    border-radius: 2%;
-}
-
-.demo__header .econ{
-    padding-top: 1.5rem;
-    color: white;
-    background: #636e72;
-    height: 6rem;
-    border-radius: 2%;
-}
-
-.demo__header .education{
-    padding-top: 1.5rem;
-    color: white;
-    background:orange;
-    height: 6rem;
-    border-radius: 2%;
-}
-
-.demo__header .LGBTQ{
-    padding-top: 1.5rem;
-    color: white;
-    background:pink;
-    height: 6rem;
-    border-radius: 2%;
-}
 
 .demo__content {
   overflow: hidden;
@@ -94,8 +55,8 @@ border-radius: 5%;
   top: 0;
   width: 100%;
   height: 100%;
-  -webkit-transform-origin: 50% 100%;
-          transform-origin: 50% 100%;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
 
 }
 .demo__card.reset {
@@ -132,11 +93,7 @@ border-radius: 5%;
   height: 20.5rem;
   padding-top: 1rem;
 }
-.demo__card__top_white {
-  background: white;
-  border-radius:5% 5% 0 0;
-  opacity: 100%;
-}
+
 
 .demo__card__img1 {
   overflow: hidden;
@@ -246,6 +203,9 @@ border-radius: 5%;
   font-weight: bold;
   color: #000000;
     margin-bottom: 10%;
+    background-color: #cacaca;
+  
+    
 }
 .demo__card__btm {
     margin-top: 2%;
