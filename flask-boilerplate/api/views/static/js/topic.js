@@ -79,7 +79,7 @@ $(document).ready(function () {
                 data: { array: array },
                 success: function (response) {
                     localStorage.setItem("id", JSON.parse(response));
-                    window.location.href = '/quiz';
+                    window.location.href = '/quiz?id='+response;
                 }
             });
         }
