@@ -295,7 +295,9 @@ border-radius: 5%;
 }
 
 .button_group{
-    margin-left: 7.5%;
+    /*margin-left: 7.5%;*/
+    display: flex;
+    justify-content: center;
 }
 
 .animate
