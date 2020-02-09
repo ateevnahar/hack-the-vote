@@ -21,3 +21,16 @@ class Candidate(Mixin, db.Model):
 
     def __repr__(self):
         return f"<Email {self.email}>"
+
+    def testData(self):
+        candidate = Candidate.query.filter_by(id=request.args.get('id')).first()
+
+        candidate.id = request.form["id"]
+        candidate.name = request.form["name"]
+        candidate.website = request.form["website"]
+        candidate.issues = json.loads(request.form["issues"])
+        candidate.articles = json.loads(request.form["articles"])
+        candidate.vote_history = json.loads(request.form["vote_history"])
+        candidate.image_link = request.form["image_link"]
+
+        db.session.commit()

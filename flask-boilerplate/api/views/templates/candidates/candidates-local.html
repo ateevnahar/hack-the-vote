@@ -11,32 +11,22 @@
 
 <body>
 <div class="container-fluid">
+
     <div class="topdown text-mid">
         <h3> Find your candidate!</h3>
         <div class="form-group row">
-            <label for="Zipcode" class="col-2 col-form-label zippy">
-                Zipcode: </label>
-            <div class="col-8">
-                <input class="form-control" id="Zipcode" placeholder="05403">
+            {% for item in data["officials"] %}
+            <div className="card col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="card">
+                    <img src="{{ item["name"] }} " class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{ array[i]["name"] }}</h5>
+                        <p class="card-text">{{ array[i]["issues"] }}</p>
+                        <a href="{{ array[i]["website"] }}" class="btn btn-primary">Website</a>
+                    </div>
+                </div>
             </div>
-            <div class="col-2">
-            </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-2"></div>
-            <div class="col-8">
-                <a href="{{ url_for('main.quiz') }}" id="next-step"
-                   class="btn btn-success btn-block">Find Local Candidates</a>
-            </div>
-            <div class="col-2"></div>
-        </div>
-        <div class="form-group row">
-            <div class="col-2"></div>
-            <div class="col-8">
-                <a href="{{ url_for('main.quiz') }}" id="next-step"
-                   class="btn btn-primary btn-block">Presidential Candidates</a>
-            </div>
-            <div class="col-2"></div>
+            {% endfor %}
         </div>
     </div>
     <div class="form-group row">
