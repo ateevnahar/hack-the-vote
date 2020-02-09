@@ -2,61 +2,61 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Profile</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="{{ url_for('.static', filename='css/candidates.css') }}" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="{{ url_for('.static', filename='css/candidates.css') }}" rel="stylesheet"/>
 </head>
 
 <body>
-  <div class="container-fluid">
+<div class="container-fluid">
     <div class="topdown text-mid">
-    <h3> Find your candidate!</h3>
-    <div class="form-group row">
-      <label for="Zipcode" class="col-2 col-form-label zippy">
-        Zipcode: </label>
-      <div class="col-8">
-        <input class="form-control" id="Zipcode" placeholder="05403">
-      </div>
-      <div class="col-2">
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-2"></div>
-      <div class="col-8">
-        <a href="{{url_for('main.candidates_local')}}" id="next-step-1"
-          class="btn btn-success btn-block">Find Local Candidates</a>
-      </div>
-      <div class="col-2"></div>
-    </div>
-    <div class="form-group row">
-        <div class="col-2"></div>
-        <div class="col-8">
-            <a href="{{ url_for('main.candidates_presidential') }}" id="next-step-2"
-               class="btn btn-primary btn-block">Presidential Candidates</a>
+        <h3> Find your candidate!</h3>
+        <div class="form-group row">
+            <label for="Zipcode" class="col-2 col-form-label zippy">
+                Zipcode: </label>
+            <div class="col-8">
+                <input class="form-control" id="Zipcode" placeholder="05403">
+            </div>
+            <div class="col-2">
+            </div>
         </div>
-        <div class="col-2"></div>
-    </div>
+        <div class="form-group row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <a href="{{ url_for('main.candidates_local') }}" id="next-step-1"
+                   class="btn btn-success btn-block">Find Local Candidates</a>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <div class="form-group row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <a href="{{ url_for('main.candidates_presidential') }}" id="next-step-2"
+                   class="btn btn-primary btn-block">Presidential Candidates</a>
+            </div>
+            <div class="col-2"></div>
+        </div>
     </div>
     <div class="form-group row">
-      <div class="col-2">
-          <a href = "{{url_for('main.index')}}" class="btn back-button shadow animate gery">
-      &#8592</a>
-      </div>
-      <div class="col-10">
-      </div>
+        <div class="col-2">
+            <a href="{{ url_for('main.index') }}" class="btn back-button shadow animate gery">
+                &#8592</a>
+        </div>
+        <div class="col-10">
+        </div>
     </div>
 
     <div class="form-group row">
-      <div class="col-12 faq">
-        <a href="{{url_for('main.faq')}}">
-          <h3 class="text-mid">FAQ</h3>
-        </a>
-      </div>
+        <div class="col-12 faq">
+            <a href="{{ url_for('main.faq') }}">
+                <h3 class="text-mid">FAQ</h3>
+            </a>
+        </div>
     </div>
-  </div>
-    <script src="{{ url_for('.static', filename='js/location.js') }}"></script>
-  </body>
+</div>
+<script src="{{ url_for('.static', filename='js/location.js') }}"></script>
+</body>
 
-  </html>
+</html>

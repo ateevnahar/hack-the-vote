@@ -2,9 +2,9 @@
 # initializing db in api.models.base instead of in api.__init__.py
 # to prevent circular dependencies
 from .Candidate import Candidate
+from .GetData import GetData
 from .Person import Person
 from .base import db
-from .GetData import GetData
 from .data_types.Article import Article
 from .data_types.Issue import Issue
 from .data_types.Topic import Topic
