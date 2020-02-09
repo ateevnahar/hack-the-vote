@@ -59,6 +59,10 @@ def candidates_local():
 def quiz():
     return render_template("quiz/quiz.html")
 
+@main.route("/topic")
+def topic():
+    return render_template("topic.html") 
+
 
 @main.route("/quizhomepage")
 def quizhome():
@@ -107,6 +111,18 @@ def get_persons():
 def update_candidate():
     candidate = Candidate.query.filter_by(id=request.args.get('id')).first()
     return render_template("manual/updateCandidate.html", data=candidate)
+
+@main.route("/api/quiz_result", methods=["GET"])
+def quiz_result(): 
+    array = request.args.get('array')
+    new_person = Person(cookie=0, saved_topics=array)
+
+    # commit it to database
+    db.session.add_all([new_person])
+    db.session.commit()
+
+    return json.dumps(new_person.id)
+
 
 
 @main.route("/api/update_candidate", methods=["POST"])

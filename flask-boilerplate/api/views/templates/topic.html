@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="{{url_for('.static', filename='css/topic.css')}}" rel="stylesheet" />
+</head>
+
+<body>
+  <div>
+    <button onclick="location.href = '../login/login.template.client.html';" class="back-button shawdow animate gery">
+      &#8592</button>
+  </div>
+  <div class="container">
+    <div class="demo">
+      <div class="demo__content">
+        <div class="demo__card-cont">
+          <div class="demo__card">
+            <div class="demo__card__top_white">
+              <div class="demo__card__img10"></div>
+              <p class="demo__card__name">Technology</p>
+            </div>
+            <div class="demo__card__choice m--reject"></div>
+            <div class="demo__card__choice m--like"></div>
+            <div class="demo__card__drag"></div>
+          </div>
+          <div class="demo__card">
+            <div class="demo__card__top_white">
+              <div class="demo__card__img9"></div>
+              <p class="demo__card__name">Agricultural</p>
+            </div>
+            <div class="demo__card__choice m--reject"></div>
+            <div class="demo__card__choice m--like"></div>
+            <div class="demo__card__drag"></div>
+          </div>
+          <div class="demo__card">
+
+            <div class="demo__card__top_white">
+              <div class="demo__card__img8"></div>
+              <p class="demo__card__name">Economy</p>
+            </div>
+
+            <div class="demo__card__choice m--reject"></div>
+            <div class="demo__card__choice m--like"></div>
+            <div class="demo__card__drag"></div>
+          </div>
+          <div class="demo__card">
+
+            <div class="demo__card__top_white">
+              <div class="demo__card__img7"></div>
+              <p class="demo__card__name">LGBTQ Rights</p>
+            </div>
+
+            <div class="demo__card__choice m--reject"></div>
+            <div class="demo__card__choice m--like"></div>
+            <div class="demo__card__drag"></div>
+          </div>
+          <div class="demo__card">
+
+            <div class="demo__card__top_white">
+              <div class="demo__card__img6"></div>
+              <p class="demo__card__name">Gun Control</p>
+            </div>
+
+            <div class="demo__card__choice m--reject"></div>
+            <div class="demo__card__choice m--like"></div>
+            <div class="demo__card__drag"></div>
+          </div>
+          <div class="demo__card">
+
+            <div class="demo__card__top_white">
+              <div class="demo__card__img5"></div>
+              <p class="demo__card__name">Abortion</p>
+            </div>
+
+            <div class="demo__card__choice m--reject"></div>
+            <div class="demo__card__choice m--like"></div>
+            <div class="demo__card__drag"></div>
+          </div>
+          <div class="demo__card">
+
+            <div class="demo__card__top_white">
+              <div class="demo__card__img4"></div>
+              <div class="demo__card__name">Student Loan</div>
+            </div>
+
+            <div class="demo__card__choice m--reject"></div>
+            <div class="demo__card__choice m--like"></div>
+            <div class="demo__card__drag"></div>
+          </div>
+          <div class="demo__card">
+
+            <div class="demo__card__top_white">
+              <div class="demo__card__img3"></div>
+              <p class="demo__card__name">Medicare</p>
+            </div>
+
+            <div class="demo__card__choice m--reject"></div>
+            <div class="demo__card__choice m--like"></div>
+            <div class="demo__card__drag"></div>
+          </div>
+          <div class="demo__card">
+
+            <div class="demo__card__top_white">
+              <div class="demo__card__img2"></div>
+              <p class="demo__card__name ">Immigration</p>
+            </div>
+            <div class="demo__card__choice m--reject"></div>
+            <div class="demo__card__choice m--like"></div>
+            <div class="demo__card__drag"></div>
+          </div>
+          <div class="demo__card">
+            <div class="demo__card__top_white">
+              <div class="demo__card__img1"></div>
+              <p class=" demo__card__name">Climate Change</p>
+            </div>
+
+            <div class="demo__card__choice m--reject"></div>
+            <div class="demo__card__choice m--like"></div>
+            <div class="demo__card__drag"></div>
+          </div>
+        </div>
+      </div>
+      <div class=text>
+        <div class=t1>Most interested</div<>
+
+          <div class=t2>Less interested</div>
+        </div>
+        <div class="button_group">
+
+          <button class="action-button shawdow animate mostred">1</button>
+          <button class="action-button shawdow animate twored">2</button>
+          <button class="action-button shawdow animate threegreen">3</button>
+          <button class="action-button shawdow animate fourgreen">4</button>
+          <button class="action-button shawdow animate mostgreen">5</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="{{url_for('.static', filename='js/topic.js')}}"></script>
+</body>
+
+</html>
