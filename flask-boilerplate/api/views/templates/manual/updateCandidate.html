@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Title</title>
-    </head>
-    <body>
-        Save Customer
-        <form method="POST">
-            ID:<br><input type="text" name="id" value={{data["id"]|default("")|tojson}}><br>
-            Name:<br><input type="text" name="name" value={{data["name"]|default("")|tojson}}><br>
-            Website:<br><input type="text" name="website" value={{data["website"]|default("")|tojson}}><br>
-            Issues:<br><input type="text" name="issues" value={{data["issues"]|default("")|tojson}}><br>
-            Articles:<br><input type="text" name="articles" value={{data["articles"]|default("")|tojson}}><br>
-            Vote History:<br><input type="text" name="vote_history" value={{data["vote_history"]|default("")|tojson}}><br>
-            Image Link:<br><input type="text" name="image_link" value={{data["image_link"]|default("")|tojson}}><br>
-          <input type="submit" value="Submit">
-        </form>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Save Customer
+<form method="POST">
+    ID:<br><input type="text" name="id" value={{ data["id"]|default("")|tojson }}><br>
+    Name:<br><input type="text" name="name" value={{ data["name"]|default("")|tojson }}><br>
+    Website:<br><input type="text" name="website" value={{ data["website"]|default("")|tojson }}><br>
+    Issues:<br><input type="text" name="issues" value={{ data["issues"]|default("")|tojson }}><br>
+    Articles:<br><input type="text" name="articles" value={{ data["articles"]|default("")|tojson }}><br>
+    Vote History:<br><input type="text" name="vote_history" value={{ data["vote_history"]|default("")|tojson }}><br>
+    Image Link:<br><input type="text" name="image_link" value={{ data["image_link"]|default("")|tojson }}><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
 </html>

@@ -1,6 +1,6 @@
 .topdown {
     position: absolute;
-    top:  25%;
+    top: 25%;
     right: 0px;
     left: 0px;
 }
@@ -15,7 +15,7 @@
 
 .login {
     position: absolute;
-    bottom:  2%;
+    bottom: 2%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }

@@ -2,154 +2,139 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Quiz</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="{{ url_for('.static', filename='css/quiz.css') }}" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiz</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="{{ url_for('.static', filename='css/quiz.css') }}" rel="stylesheet"/>
 </head>
 
 <body>
-  <div>
-    <a href = "{{url_for('main.index')}}" class="btn back-button shadow animate gery">
-      &#8592</a>
+<div>
+    <a href="{{ url_for('main.index') }}" class="btn back-button shadow animate gery">
+        &#8592</a>
     <div class="switch">
-      <input type="checkbox" checked>
-      <label>
-        <span class="fontawesome-ok">BLUR</span>
-        <span class="fontawesome-remove"></span>
-        <div></div>
-      </label>
+        <input type="checkbox" checked>
+        <label>
+            <span class="fontawesome-ok">BLUR</span>
+            <span class="fontawesome-remove"></span>
+            <div></div>
+        </label>
     </div>
-  </div>
-  <div class="container">
+</div>
+<div class="container">
     <div class="demo">
-      <div class="demo__content">
-        <div class="demo__card-cont">
-          <div class="demo__card">
-            <header class="demo__header">
-              <h1 class="enviro">Environment</h1>
-            </header>
-            <div class="demo__card__top brown">
-              <div class="demo__card__img6 demo__card__blur"></div>
-              <p class="demo__card__name blur_name">Donald</p>
-            </div>
-            <div class="demo__card__btm">
-              <p class="demo__card__we">Whatever</p>
-            </div>
-            <div class="demo__card__choice m--reject"></div>
-            <div class="demo__card__choice m--like"></div>
-            <div class="demo__card__drag"></div>
-          </div>
-          <div class="demo__card">
-            <header class="demo__header">
-              <h1 class="LGBTQ">Technology</h1>
-            </header>
-            <div class="demo__card__top lime">
-              <div class="demo__card__img5 demo__card__blur"></div>
-              <p class="demo__card__name blur_name">Joe</p>
-            </div>
-            <div class="demo__card__btm">
-              <p class="demo__card__we">#example policy</p>
-            </div>
-            <div class="demo__card__choice m--reject"></div>
-            <div class="demo__card__choice m--like"></div>
-            <div class="demo__card__drag"></div>
-          </div>
-          <div class="demo__card">
-            <header class="demo__header">
-              <h1 class="education">Education</h1>
-            </header>
-            <div class="demo__card__top cyan">
-              <div class="demo__card__img4 demo__card__blur"></div>
-              <div class="demo__card__name blur_name">Andrew</div>
-            </div>
-            <div class="demo__card__btm">
-              <p class="demo__card__we">Whatever</p>
-            </div>
-            <div class="demo__card__choice m--reject"></div>
-            <div class="demo__card__choice m--like"></div>
-            <div class="demo__card__drag"></div>
-          </div>
-          <div class="demo__card">
-            <header class="demo__header">
-              <h1 class="healthcare">Healthcare</h1>
-            </header>
-            <div class="demo__card__top indigo">
-              <div class="demo__card__img1 demo__card__blur"></div>
-              <p class="demo__card__name blur_name">Bernie</p>
-            </div>
-            <div class="demo__card__btm">
-              <p class="demo__card__we">#example plolicies 3</p>
-            </div>
-            <div class="demo__card__choice m--reject"></div>
-            <div class="demo__card__choice m--like"></div>
-            <div class="demo__card__drag"></div>
-          </div>
-          <div class="demo__card">
-            <header class="demo__header">
-              <h1 class="econ">Jobs & Econ</h1>
-            </header>
-            <div class="demo__card__top blue">
-              <div class="demo__card__img3 demo__card__blur"></div>
-              <p class="demo__card__name blur_name">Pete</p>
-            </div>
-            <div class="demo__card__btm">
-              <p class="demo__card__we">#example policies2</p>
-            </div>
-            <div class="demo__card__choice m--reject"></div>
-            <div class="demo__card__choice m--like"></div>
-            <div class="demo__card__drag"></div>
-          </div>
-          <div class="demo__card">
-            <header class="demo__header">
-              <h1 class="enviro">Environment</h1>
-            </header>
-            <div class="demo__card__top purple">
-              <div class="demo__card__img2 demo__card__blur"></div>
-              <p class="demo__card__name">Elizabeth</p>
-            </div>
-            <div class="demo__card__btm">
-              <p class="demo__card__we">#example policies1</p>
-            </div>
-            <div class="demo__card__choice m--reject"></div>
-            <div class="demo__card__choice m--like"></div>
-            <div class="demo__card__drag"></div>
-          </div>
+        <div class="demo__content">
+            <div class="demo__card-cont">
+                <div class="demo__card">
+                    <header class="demo__header">
+                        <h1 class="enviro">Environment</h1>
+                    </header>
+                    <div class="demo__card__top brown">
+                        <div class="demo__card__img6 demo__card__blur"></div>
+                        <p class="demo__card__name blur_name">Donald</p>
+                    </div>
+                    <div class="demo__card__btm">
+                        <p class="demo__card__we">Whatever</p>
+                    </div>
+                    <div class="demo__card__choice m--reject"></div>
+                    <div class="demo__card__choice m--like"></div>
+                    <div class="demo__card__drag"></div>
+                </div>
+                <div class="demo__card">
+                    <header class="demo__header">
+                        <h1 class="LGBTQ">Technology</h1>
+                    </header>
+                    <div class="demo__card__top lime">
+                        <div class="demo__card__img5 demo__card__blur"></div>
+                        <p class="demo__card__name blur_name">Joe</p>
+                    </div>
+                    <div class="demo__card__btm">
+                        <p class="demo__card__we">#example policy</p>
+                    </div>
+                    <div class="demo__card__choice m--reject"></div>
+                    <div class="demo__card__choice m--like"></div>
+                    <div class="demo__card__drag"></div>
+                </div>
+                <div class="demo__card">
+                    <header class="demo__header">
+                        <h1 class="education">Education</h1>
+                    </header>
+                    <div class="demo__card__top cyan">
+                        <div class="demo__card__img4 demo__card__blur"></div>
+                        <div class="demo__card__name blur_name">Andrew</div>
+                    </div>
+                    <div class="demo__card__btm">
+                        <p class="demo__card__we">Whatever</p>
+                    </div>
+                    <div class="demo__card__choice m--reject"></div>
+                    <div class="demo__card__choice m--like"></div>
+                    <div class="demo__card__drag"></div>
+                </div>
+                <div class="demo__card">
+                    <header class="demo__header">
+                        <h1 class="healthcare">Healthcare</h1>
+                    </header>
+                    <div class="demo__card__top indigo">
+                        <div class="demo__card__img1 demo__card__blur"></div>
+                        <p class="demo__card__name blur_name">Bernie</p>
+                    </div>
+                    <div class="demo__card__btm">
+                        <p class="demo__card__we">#example plolicies 3</p>
+                    </div>
+                    <div class="demo__card__choice m--reject"></div>
+                    <div class="demo__card__choice m--like"></div>
+                    <div class="demo__card__drag"></div>
+                </div>
+                <div class="demo__card">
+                    <header class="demo__header">
+                        <h1 class="econ">Jobs & Econ</h1>
+                    </header>
+                    <div class="demo__card__top blue">
+                        <div class="demo__card__img3 demo__card__blur"></div>
+                        <p class="demo__card__name blur_name">Pete</p>
+                    </div>
+                    <div class="demo__card__btm">
+                        <p class="demo__card__we">#example policies2</p>
+                    </div>
+                    <div class="demo__card__choice m--reject"></div>
+                    <div class="demo__card__choice m--like"></div>
+                    <div class="demo__card__drag"></div>
+                </div>
+                <div class="demo__card">
+                    <header class="demo__header">
+                        <h1 class="enviro">Environment</h1>
+                    </header>
+                    <div class="demo__card__top purple">
+                        <div class="demo__card__img2 demo__card__blur"></div>
+                        <p class="demo__card__name">Elizabeth</p>
+                    </div>
+                    <div class="demo__card__btm">
+                        <p class="demo__card__we">#example policies1</p>
+                    </div>
+                    <div class="demo__card__choice m--reject"></div>
+                    <div class="demo__card__choice m--like"></div>
+                    <div class="demo__card__drag"></div>
+                </div>
 
+
+            </div>
 
         </div>
-
-      </div>
-      <div class="button_group">
-<<<<<<< HEAD
-        <button class="action-button shawdow animate red">Nope</button>
-        <button class="action-button shawdow animate green">Like</button>
-=======
-        <button class="action-button shadow animate red">Nope</button>
-        <button class="action-button shadow animate green">Like</button>
->>>>>>> Merged old files'
-      </div>
+        <div class="button_group">
+            <button class="action-button shadow animate red">Nope</button>
+            <button class="action-button shadow animate green">Like</button>
+        </div>
     </div>
 
 
-<<<<<<< HEAD
-=======
+</div>
+</div>
+</div>
 
-
-
-
-
-
-
-  </div>
-  </div>
-  </div>
-
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="{{ url_for('.static', filename='js/quiz.js') }}"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="{{ url_for('.static', filename='js/quiz.js') }}"></script>
 </body>
 
 </html>
->>>>>>> Merged old files'
