@@ -19,7 +19,7 @@ topics = ["Climate Change", "Immigration", "Terrorism", "Social Security and Med
 # function that is called when you visit /
 @main.route("/")
 def index():
-    return render_template("login/login.template.client.html")
+    return render_template("homepage.html")
 
 
 @main.route("/faq")
