@@ -7,6 +7,7 @@
     <title>Profile</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="{{ url_for('.static', filename='css/candidates.css') }}" rel="stylesheet"/>
+    <script src="{{ url_for('.static', filename='js/presidential.js') }}"></script>
 </head>
 
 <body>
@@ -14,18 +15,7 @@
     <div class="title-loc text-mid">
       <h3> Presidential Candidates! </h3>
       <div class="container-fluid">
-        <div class="row">
-          <div className="card col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <div class="card">
-              <img src="https://www.sanders.senate.gov/imo/media/image/Sanders_Headshot.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-
+        <div class="row" id="cards">
         </div>
       </div>
 
