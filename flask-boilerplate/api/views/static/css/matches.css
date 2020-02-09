@@ -1,0 +1,105 @@
+/* CSS design by @jofpin */
+@import url(https://fonts.googleapis.com/css?family=Raleway|Varela+Round|Coda);
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+body {
+  background: #cacacac0;
+ 
+}
+
+.title-pen {
+margin-top: 10%;
+  color: #e76043;
+  font-family: "Coda", sans-serif;
+  text-align: center;
+  transform: scale(1.15);
+  transition: transform 1500ms cubic-bezier(0, 0, 0.2, 0.6);
+  will-change: transform;
+}
+
+.allprofile{
+    display:grid;
+    grid-row-gap: 60px;
+}
+.user-profile {
+  margin-left: 2%;
+  width: 22em; 
+  height: 11em;
+  background: #fff;
+  border-radius: .3em;
+  z-index: 1;
+  float:left;
+  margin-left: 165px;;
+  transform: translate(-150px,0);
+  transition: transform 1850ms cubic-bezier(0, 0, 0.1, 1), opacity 550ms linear;
+  will-change: opacity, transform;
+}
+
+.user-profile  .username {
+  margin: auto;
+  margin-top: -4.40em;
+  margin-left: 5.80em;
+  color: #658585;
+  font-size: 1.53em;
+  font-family: "Coda", sans-serif;
+  font-weight: bold;
+}
+.user-profile  .bio {
+  margin: auto;
+  display: inline-block;
+  margin-left: 10.2em;
+  color: #e76043; 
+  font-size: .87em;
+  font-family: "varela round", sans-serif;
+}
+.user-profile > .description {
+  margin: auto;
+  margin-top: 1em;
+  margin-right: -2em;
+  width: 18em;
+  color: #c0c5c5; 
+  font-size: .87em;
+  font-family: "varela round", sans-serif;
+}
+.user-profile > img.avatar {
+  padding: .7em;
+  margin-left: .3em;
+  margin-top: .3em;
+  width: 7em;
+  border-radius: 20px;
+  height: auto;
+  transform: scale(1.15);
+  transition: transform 1500ms cubic-bezier(0, 0, 0.2, 0.6);
+  will-change: transform;
+}
+
+.user-profile ul.data {
+	margin: 15px auto;
+	height: 3.em;
+  background: #4eb6b6;
+  text-align: center;
+  border-radius: 0 0 .3em .3em;
+}
+.user-profile li {
+  margin: 0 auto;
+  padding: 0.5em; 
+  width: 33.33334%;
+  display: table-cell;
+  text-align: center;
+}
+
+.user-profile span {
+	font-family: "varela round", sans-serif;
+	color: #e3eeee;
+  white-space: nowrap;
+  font-size: 1.27em;
+  font-weight: bold;
+}
+.user-profile span:hover {
+  color: #daebea;
+}
+

@@ -80,6 +80,10 @@ def quiz():
     return render_template("quiz/quiz.html", array=array)
 
 
+@main.route("/matches")
+def matches(): 
+    return render_template("matches.html")
+
 @main.route("/topic")
 def topic():
     return render_template("topic.html")
