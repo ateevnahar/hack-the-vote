@@ -1,10 +1,13 @@
 import json
+from urllib.request import urlopen
 
 import jsonpickle as jsonpickle
 from flask import Blueprint, request, render_template, json, Flask
 
 from api.core import create_response, serialize_list, logger
 from api.models import db, Person, Candidate, GetData
+import urllib, json
+
 
 main = Blueprint("main", __name__, template_folder='templates', static_url_path='/%s',
                  static_folder='static')  # initialize blueprint
@@ -15,6 +18,8 @@ topics_list = ["Climate Change", "Immigration", "Terrorism", "Social Security an
                "Abortion",
                "Gun Control", "Homelessness", "Unemployment"]
 
+google_civic_url = 'https://www.googleapis.com/civicinfo/v2/representatives?levels=administrativeArea1&key' \
+                   '=AIzaSyBLqHtNyFSw7PFmorUeUUb8Nwc74bMajc0&address= '
 
 # function that is called when you visit /
 @main.route("/")
@@ -39,7 +44,9 @@ def candidates_presidential():
 
 @main.route("/candidates-local")
 def candidates_local():
-    return render_template("candidates/candidates-local.html")
+    name = request.args.get('zip')
+    response = urlopen(google_civic_url + name)
+    return render_template("candidates/candidates-local.html", data=json.loads(response.read()))
 
 
 @main.route("/quiz")
