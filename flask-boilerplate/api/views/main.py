@@ -13,7 +13,7 @@ main = Blueprint("main", __name__, template_folder='templates', static_url_path=
 
 data = GetData()
 
-topics = ["Climate Change", "Immigration", "Terrorism", "Social Security and Medicare", "Student Loans", "Abortion",
+topics_list = ["Climate Change", "Immigration", "Terrorism", "Social Security and Medicare", "Student Loans", "Abortion",
               "Gun Control", "Homelessness", "Unemployment"]
 
 # function that is called when you visit /
@@ -44,8 +44,7 @@ def quizhome():
 
 @main.route("/api/quiz_topics", methods=["GET"])
 def topics():
-
-    return json.dumps(topics)
+    return json.dumps(topics_list)
 
 
 @main.route("/api/save_user", methods=["GET"])
