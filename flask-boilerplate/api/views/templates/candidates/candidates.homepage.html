@@ -25,7 +25,7 @@
     <div class="form-group row">
       <div class="col-2"></div>
       <div class="col-8">
-        <a href="{{url_for('main.candidates_local')}}" id="next-step"
+        <a href="{{url_for('main.candidates_local')}}" id="next-step-1"
           class="btn btn-success btn-block">Find Local Candidates</a>
       </div>
       <div class="col-2"></div>
@@ -33,7 +33,7 @@
     <div class="form-group row">
       <div class="col-2"></div>
       <div class="col-8">
-        <a href="{{url_for('main.candidates_presidential')}}" id="next-step"
+        <a href="{{url_for('main.candidates_presidential')}}" id="next-step-2"
           class="btn btn-primary btn-block">Presidential Candidates</a>
       </div>
       <div class="col-2"></div>
@@ -56,7 +56,7 @@
       </div>
     </div>
   </div>
-
+    <script src="{{ url_for('.static', filename='js/location.js') }}"></script>
   </body>
 
   </html>
