@@ -14,12 +14,12 @@ main = Blueprint("main", __name__, template_folder='templates', static_url_path=
 
 data = GetData()
 
-topics_list = ["Climate Change", "Immigration", "Terrorism", "Social Security and Medicare", "Student Loans",
+topics_list = ["Environment", "Immigration", "Terrorism", "Social Security and Medicare", "Student Loans",
                "Abortion",
                "Gun Control", "Homelessness", "Unemployment"]
 
 google_civic_url = 'https://www.googleapis.com/civicinfo/v2/representatives?levels=administrativeArea1&key' \
-                   '=AIzaSyBLqHtNyFSw7PFmorUeUUb8Nwc74bMajc0&address= '
+                   '=AIzaSyBLqHtNyFSw7PFmorUeUUb8Nwc74bMajc0&address='
 
 # function that is called when you visit /
 @main.route("/")
@@ -44,9 +44,15 @@ def candidates_presidential():
 
 @main.route("/candidates-local")
 def candidates_local():
-    name = request.args.get('zip')
-    response = urlopen(google_civic_url + name)
-    return render_template("candidates/candidates-local.html", data=json.loads(response.read()))
+    zip = request.args.get('zip')
+    if zip is None:
+        msg = "No zip provided."
+        logger.info(msg)
+        return create_response(status=422, message=msg)
+
+    response = urlopen(google_civic_url + zip)
+    array = json.loads(response.read())
+    return render_template("candidates/candidates-local.html", data=array)
 
 
 @main.route("/quiz")

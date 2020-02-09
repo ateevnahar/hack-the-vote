@@ -19,18 +19,18 @@ class Candidate(Mixin, db.Model):
     def __init__(self, name):
         self.name = name
 
+    def make_new(self, website, issues, image_link):
+        self.website = website
+        self.issues = issues
+        self.image_link = image_link
+
     def __repr__(self):
         return f"<Email {self.email}>"
 
-    def testData(self):
-        candidate = Candidate.query.filter_by(id=request.args.get('id')).first()
+    @staticmethod
+    def test_data():
+        candidate1 = Candidate("Donald Trump").make_new('https://www.donaldjtrump.com/', )
 
-        candidate.id = request.form["id"]
-        candidate.name = request.form["name"]
-        candidate.website = request.form["website"]
-        candidate.issues = json.loads(request.form["issues"])
-        candidate.articles = json.loads(request.form["articles"])
-        candidate.vote_history = json.loads(request.form["vote_history"])
-        candidate.image_link = request.form["image_link"]
+
 
         db.session.commit()
