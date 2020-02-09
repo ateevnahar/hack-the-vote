@@ -1,5 +1,5 @@
-from newsapi import NewsApiClient
 from aylienapiclient import textapi
+from newsapi import NewsApiClient
 
 from .Topics import Topics
 from .data_types.Article import Article

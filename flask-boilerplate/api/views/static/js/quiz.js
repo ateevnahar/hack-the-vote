@@ -26,8 +26,6 @@ $(document).ready(function () {
     };
 
 
-
-
     function release() {
 
         if (pullDeltaX >= decisionVal) {
@@ -122,17 +120,14 @@ $(document).ready(function () {
             $item2.removeClass("blurtext");
 
 
-        }
-        else if ($(this).is("checked") == false) {
+        } else if ($(this).is("checked") == false) {
             $item.addClass("blur");
             $item2.addClass("blurtext");
         }
     });
 
 
-
-
-    //pull data from backend base on quiz result 
+    //pull data from backend base on quiz result
 
     //matching part 
 

@@ -1,14 +1,9 @@
 # conftest.py is used by pytest to share fixtures
 # https://docs.pytest.org/en/latest/fixture.html#conftest-py-sharing-fixture-functions
-import os
-import tempfile
 import time
-from unittest import mock
 
-import testing.postgresql
 import pytest
-import sqlalchemy
-from flask_migrate import Migrate
+import testing.postgresql
 
 from api import create_app
 
