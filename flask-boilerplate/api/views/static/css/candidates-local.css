@@ -1,0 +1,61 @@
+.topdown {
+    top: 25%;
+    right: 0px;
+    left: 0px;
+}
+
+
+.title-loc {
+    position: absolute;
+    top:  2%;
+    right: 0px;
+    left: 0px;
+}
+
+
+.text-mid {
+    text-align: center;
+}
+
+.zippy {
+    padding-left: 5%;
+}
+
+.spacer {
+    margin-top: 5%;
+    padding-top: 5%;
+}
+
+.faq {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.faq-cards {
+    position: relative;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.back-button {
+    position: relative;
+    padding: 5px 15px;
+
+    margin: 5px 10px 10px 0px;
+    font-weight: 200%;
+    float: left;
+    border-radius: 12px;
+    font-family: 'Pacifico';
+    font-size: 15px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.gery {
+    background-color: #636e72;
+    border-bottom: 5px solid #2d3436;
+    text-shadow: 0px -2px #636e72;
+}
