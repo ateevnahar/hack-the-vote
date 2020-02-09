@@ -13,6 +13,7 @@ class Person(Mixin, db.Model):
     #    db.Integer, db.ForeignKey("person.id", ondelete="SET NULL"), nullable=True
     # )
     saved_topics = db.Column(db.PickleType, nullable=True)
+
     # emails = db.relationship("Email", backref="emails")
 
     def __init__(self, cookie: str, saved_topics):

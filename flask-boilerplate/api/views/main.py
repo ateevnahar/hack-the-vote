@@ -2,19 +2,19 @@ import json
 
 import jsonpickle as jsonpickle
 from flask import Blueprint, request, render_template, json, Flask
-from api.models import db, Person, Candidate, GetData
-from api.core import create_response, serialize_list, logger
 
-from sqlalchemy import inspect
-import os.path
+from api.core import create_response, serialize_list, logger
+from api.models import db, Person, Candidate, GetData
 
 main = Blueprint("main", __name__, template_folder='templates', static_url_path='/%s',
                  static_folder='static')  # initialize blueprint
 
 data = GetData()
 
-topics_list = ["Climate Change", "Immigration", "Terrorism", "Social Security and Medicare", "Student Loans", "Abortion",
-              "Gun Control", "Homelessness", "Unemployment"]
+topics_list = ["Climate Change", "Immigration", "Terrorism", "Social Security and Medicare", "Student Loans",
+               "Abortion",
+               "Gun Control", "Homelessness", "Unemployment"]
+
 
 # function that is called when you visit /
 @main.route("/")
@@ -31,9 +31,11 @@ def faq():
 def candidates():
     return render_template("candidates/candidates.homepage.html")
 
+
 @main.route("/candidates-presidential")
 def candidates_presidential():
     return render_template("candidates/candidates-presidential.html")
+
 
 @main.route("/candidates-local")
 def candidates_local():

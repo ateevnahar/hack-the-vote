@@ -2,9 +2,9 @@ import configparser
 import logging
 from typing import Tuple, List
 
-from werkzeug.local import LocalProxy
 from flask import current_app, jsonify
 from flask.wrappers import Response
+from werkzeug.local import LocalProxy
 
 # logger object for all views to use
 logger = LocalProxy(lambda: current_app.logger)
@@ -25,7 +25,7 @@ class Mixin:
 
 
 def create_response(
-    data: dict = None, status: int = 200, message: str = ""
+        data: dict = None, status: int = 200, message: str = ""
 ) -> Tuple[Response, int]:
     """Wraps response in a consistent format throughout the API.
     
