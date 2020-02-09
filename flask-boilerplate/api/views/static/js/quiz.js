@@ -4,12 +4,16 @@ $(document).ready(function () {
     var cardsCounter = 0;
     var numOfCards = 6;
     var decisionVal = 80;
+    var ecisionVal = -80;
     var pullDeltaX = 0;
+    var ullDeltaX = 0;
     var deg = 0;
     var $card, $cardReject, $cardLike;
+    var i = 0;
 
     //smily/sad face showing after pull
     function pullChange() {
+        //console.log("Pull change");
         animating = true;
         deg = pullDeltaX / 10;
         $card.css("transform", "translateX(" + pullDeltaX + "px) rotate(" + deg + "deg)");
@@ -20,6 +24,9 @@ $(document).ready(function () {
         $cardReject.css("opacity", rejectOpacity);
         $cardLike.css("opacity", likeOpacity);
     };
+
+
+
 
     function release() {
 
@@ -55,7 +62,9 @@ $(document).ready(function () {
         }, 300);
     };
 
-    $(document).on("mousedown touchstart", ".demo__card:not(.inactive),.demo__header", function (e) {
+
+    $(document).on("mousedown touchstart", ".demo__card:not(.inactive)", function (e) {
+        console.log($(this));
         if (animating) return;
 
         $card = $(this);
@@ -67,22 +76,66 @@ $(document).ready(function () {
             var x = e.pageX || e.originalEvent.touches[0].pageX;
             pullDeltaX = (x - startX);
             if (!pullDeltaX) return;
+            //console.log(pullDeltaX);
             pullChange();
         });
 
         $(document).on("mouseup touchend", function () {
             $(document).off("mousemove touchmove mouseup touchend");
             if (!pullDeltaX) return; // prevents from rapid click events
+            console.log(pullDeltaX);
             release();
-
-            //if liked then what...
-
-            //if disliked then what...
         });
     });
+
+    $(".red").click(function () {
+
+        $cards = $(".demo__card:not(.below)");
+        $card = $cards.last();
+        $cardReject = $(".demo__card__choice.m--reject", $card);
+        $cardLike = $(".demo__card__choice.m--like", $card);
+        pullDeltaX = -800;
+        pullChange();
+        release();
+    });
+
+    //click link button 
+    $(".green").click(function () {
+
+        $cards = $(".demo__card:not(.below)");
+        $card = $cards.last();
+        $cardReject = $(".demo__card__choice.m--reject", $card);
+        $cardLike = $(".demo__card__choice.m--like", $card);
+        pullDeltaX = 800;
+        pullChange();
+        release();
+    });
+
+    //hit blurr button 
+    $('input[type="checkbox"]').click(function () {
+        $item = $(".demo__card__blur");
+        $item2 = $(".demo__card__name");
+        //$item2 = $(".demo__card__name");
+        if ($(this).is(":checked") == true) {
+
+            $item.removeClass("blur");
+            $item2.removeClass("blurtext");
+
+
+        }
+        else if ($(this).is("checked") == false) {
+            $item.addClass("blur");
+            $item2.addClass("blurtext");
+        }
+    });
+
+
+
 
     //pull data from backend base on quiz result 
 
     //matching part 
 
 });
+
+
