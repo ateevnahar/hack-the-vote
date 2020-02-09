@@ -31,6 +31,14 @@ def faq():
 def candidates():
     return render_template("candidates/candidates.homepage.html")
 
+@main.route("/candidates-presidential")
+def candidates_presidential():
+    return render_template("candidates/candidates-presidential.html")
+
+@main.route("/candidates-local")
+def candidates_local():
+    return render_template("candidates/candidates-local.html")
+
 
 @main.route("/quiz")
 def quiz():
