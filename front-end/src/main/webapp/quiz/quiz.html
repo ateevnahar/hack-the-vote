@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Quiz</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="{{ url_for('.static', filename='css/quiz.css') }}" rel="stylesheet" />
+  <link href="quiz.style.client.css" rel="stylesheet" />
 </head>
 
 <body>
   <div>
-    <a href = "{{url_for('main.index')}}" class="btn back-button shadow animate gery">
-      &#8592</a>
+    <button onclick="location.href = '../login/login.template.client.html';" class="back-button shawdow animate gery">
+      &#8592</button>
     <div class="switch">
       <input type="checkbox" checked>
       <label>
@@ -122,8 +122,8 @@
 
       </div>
       <div class="button_group">
-        <button class="action-button shadow animate red">Nope</button>
-        <button class="action-button shadow animate green">Like</button>
+        <button class="action-button shawdow animate red">Nope</button>
+        <button class="action-button shawdow animate green">Like</button>
       </div>
     </div>
 
@@ -141,7 +141,7 @@
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="{{ url_for('.static', filename='js/quiz.js') }}"></script>
+  <script src="quiz.js"></script>
 </body>
 
 </html>

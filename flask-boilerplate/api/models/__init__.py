@@ -4,7 +4,11 @@
 from .Candidate import Candidate
 from .Person import Person
 from .base import db
+from .GetData import GetData
+from .data_types.Article import Article
+from .data_types.Issue import Issue
+from .data_types.Topic import Topic
 
-__all__ = ["Candidate", "Person", "db"]
+__all__ = ["GetData", "Candidate", "Person", "db", "Article", "Issue", "Topic"]
 
 # You must import all of the new Models you create to this page
