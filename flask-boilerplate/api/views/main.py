@@ -6,20 +6,21 @@ from flask import Blueprint, request, render_template, json, Flask
 
 from api.core import create_response, serialize_list, logger
 from api.models import db, Person, Candidate, GetData
-import urllib, json
-
 
 main = Blueprint("main", __name__, template_folder='templates', static_url_path='/%s',
                  static_folder='static')  # initialize blueprint
 
 data = GetData()
 
-topics_list = ["Environment", "Immigration", "Terrorism", "Social Security and Medicare", "Student Loans",
+topics_list = ["Technology", "Agricultural", "Economy", "LGBTQ Rights", "Gun Control",
                "Abortion",
-               "Gun Control", "Homelessness", "Unemployment"]
+               "Student Loan", "Medicare", "Immigration", "Climate Change"]
 
-google_civic_url = 'https://www.googleapis.com/civicinfo/v2/representatives?levels=administrativeArea1&key' \
+google_civic_url = 'https://www.googleapis.com/civicinfo/v2/representatives?levels=administrativeArea1' \
+                   '&levels=locality&levels=regional&levels=locality&levels=sublocality1&levels=sublocality2' \
+                   '&levels=special&levels=country&key' \
                    '=AIzaSyBLqHtNyFSw7PFmorUeUUb8Nwc74bMajc0&address='
+
 
 # function that is called when you visit /
 @main.route("/")
@@ -59,9 +60,10 @@ def candidates_local():
 def quiz():
     return render_template("quiz/quiz.html")
 
+
 @main.route("/topic")
 def topic():
-    return render_template("topic.html") 
+    return render_template("topic.html")
 
 
 @main.route("/quizhomepage")
@@ -112,8 +114,9 @@ def update_candidate():
     candidate = Candidate.query.filter_by(id=request.args.get('id')).first()
     return render_template("manual/updateCandidate.html", data=candidate)
 
+
 @main.route("/api/quiz_result", methods=["GET"])
-def quiz_result(): 
+def quiz_result():
     array = request.args.get('array')
     new_person = Person(cookie=0, saved_topics=array)
 
@@ -122,7 +125,6 @@ def quiz_result():
     db.session.commit()
 
     return json.dumps(new_person.id)
-
 
 
 @main.route("/api/update_candidate", methods=["POST"])

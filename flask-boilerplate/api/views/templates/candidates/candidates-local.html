@@ -6,40 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Profile</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="{{ url_for('.static', filename='css/candidates.css') }}" rel="stylesheet"/>
+    <link href="{{ url_for('.static', filename='css/candidates-local.css') }}" rel="stylesheet"/>
 </head>
 
 <body>
 <div class="container-fluid">
-
-    <div class="topdown text-mid">
-        <h3> Find your candidate!</h3>
-        <div class="form-group row">
-            {% for item in data["officials"] %}
-            <div className="card col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                <div class="card">
-                    <img src="{{ item["name"] }} " class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title"> {{ item["name"] }}</h5>
-                        <p class="card-text">{{ item["issues"] }}</p>
-                        <a href="{{ item["website"] }}" class="btn btn-primary">Website</a>
-                    </div>
-                </div>
+    <div class="form-group row">
+            <div class="col-2">
+                <a href="{{ url_for('main.index') }}" class="btn back-button shadow animate gery">
+                    &#8592</a>
             </div>
-            {% endfor %}
+            <div class="col-10">
+            </div>
         </div>
-    </div>
-    <div class="form-group row">
-        <div class="col-2">
-            <a href="{{ url_for('main.index') }}" class="btn back-button shadow animate gery">
-                &#8592</a>
-        </div>
-        <div class="col-10">
-        </div>
-    </div>
+    <div>
 
+        <div class="topdown text-mid">
+            <h3> Find your representatives!</h3>
+            <div class="form-group row">
+                {% for item in data["officials"] %}
+                    <div class="card col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <div class="card">
+                            <img style="max-height: 300px; max-width: 150px; align-self: center;" src="{{ item["photoUrl"] |default("") }} "
+                                 class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title"> {{ item["name"] |default("") }}</h5>
+                                <p class="card-text">{{ item["issues"] |default("") }}</p>
+                                {% if "urls" in item %}
+                                    <a href="{{ item["urls"][0]|default("") }}" class="btn btn-primary">Website</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
     <div class="form-group row">
-        <div class="col-12 faq">
+        <div class="col-12">
             <a href="{{ url_for('main.faq') }}">
                 <h3 class="text-mid">FAQ</h3>
             </a>
