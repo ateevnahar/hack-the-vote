@@ -53,6 +53,10 @@ def candidates_local():
 def quiz():
     return render_template("quiz/quiz.html")
 
+@main.route("/matches")
+def matches(): 
+    return render_template("matches.html")
+
 @main.route("/topic")
 def topic():
     return render_template("topic.html") 

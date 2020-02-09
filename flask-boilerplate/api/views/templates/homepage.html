@@ -5,38 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>login</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="{{ url_for('.static', filename='css/homepage.css') }}" rel="stylesheet"/>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="{{ url_for('.static', filename='css/homepage.css') }}" rel="stylesheet" />
 </head>
 
 <body>
 
-<div class="topdown">
-    <div class="form-group row">
-        <h4 class="col-12 text-mid">Welcome to hack-the-vote</h4>
-    </div>
-    <div class="form-group row">
-        <div class="col-2"></div>
-        <div class="col-8">
-            <a href="{{ url_for('main.candidates') }}" class="btn btn-primary btn-block">Look at
-                Candidates</a>
+    <div class="topdown">
+        <div class="form-group row">
+            <h4 class="col-12 text-mid">Welcome to hack-the-vote</h4>
         </div>
-        <div class="col-2"></div>
-    </div>
-    <div class="form-group row">
-        <div class="col-2"></div>
-        <div class="col-8">
-            <a href="{{ url_for('main.quiz') }}" id="takeQuiz"
-               class="btn btn-primary btn-block">Take Quiz</a>
+        <div class="form-group row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <a href="{{ url_for('main.candidates') }}" class="btn btn-primary btn-block">Look at
+                    Candidates</a>
+            </div>
+            <div class="col-2"></div>
         </div>
-        <div class="col-2"></div>
+        <div class="form-group row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <a href="{{ url_for('main.topic') }}" id="takeQuiz" class="btn btn-primary btn-block">Take Quiz</a>
+            </div>
+            <div class="col-2"></div>
+        </div>
     </div>
-</div>
-<div class="faq">
-    <a href="{{ url_for('main.faq') }}">
-        <h3 class="">FAQ</h3>
-    </a>
-</div>
+    <div class="faq">
+        <a href="{{ url_for('main.faq') }}">
+            <h3 class="">FAQ</h3>
+        </a>
+    </div>
 
 
 </body>

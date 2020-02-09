@@ -70,9 +70,9 @@ $(document).ready(function () {
     };
 
     function incrementOrSend() {
-        if (i < 10) {
+        if (i < 9) {
             i += 1;
-        } else {
+        } else if (i == 9) {
             $.ajax({
                 method: "GET",
                 url: "/api/quiz_result",
