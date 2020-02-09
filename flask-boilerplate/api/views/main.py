@@ -6,6 +6,7 @@ from flask import Blueprint, request, render_template, json, Flask
 
 from api.core import create_response, serialize_list, logger
 from api.models import db, Person, Candidate, GetData
+import random
 
 main = Blueprint("main", __name__, template_folder='templates', static_url_path='/%s',
                  static_folder='static')  # initialize blueprint
@@ -53,12 +54,30 @@ def candidates_local():
 
     response = urlopen(google_civic_url + zip)
     array = json.loads(response.read())
+
     return render_template("candidates/candidates-local.html", data=array)
 
 
 @main.route("/quiz")
 def quiz():
-    return render_template("quiz/quiz.html")
+    if request.args.get('id') is None:
+        msg = "Please re-complete quiz."
+        logger.info(msg)
+        return create_response(status=422, message=msg)
+    person = Person.query.filter_by(id=request.args.get('id')).first()
+    person_data = person.saved_topics
+
+    candidates = Candidate.query.all()
+
+    array = []
+    for c in candidates:
+        for issues in c.issues:
+            for issue_topics in issues.issue_topics:
+                array.append({"name": c.name, "issue_name": issues.issue_text, "issue_topics": issue_topics})
+
+    random.shuffle(array)
+
+    return render_template("quiz/quiz.html", array=array)
 
 
 @main.route("/topic")
@@ -145,6 +164,12 @@ def update_candidate_post():
     )
 
 
+@main.route("/api/make_candidate", methods=["GET"])
+def make_them():
+    Candidate.test_data(db)
+    return 1
+
+
 @main.route("/api/save_candidate", methods=["GET"])
 def get_candidate():
     return render_template("manual/addCandidate.html")
@@ -172,7 +197,18 @@ def save_candidate():
 @main.route("/api/candidates", methods=["GET"])
 def get_candidates():
     candidates = Candidate.query.all()
-    return create_response(data={"candidates": serialize_list(candidates)})
+
+    if request.args.get('rm') is not None:
+        me = Candidate.query.filter_by(id=request.args.get('rm')).first()
+        Candidate.query.delete()
+        db.session.delete(me)
+
+    response = Flask.response_class(
+        response=jsonpickle.encode(candidates),
+        status=200,
+        mimetype='application/json'
+    )
+    return response
 
 
 @main.route("/analyze", methods=["GET"])

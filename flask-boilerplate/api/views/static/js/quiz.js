@@ -1,15 +1,14 @@
 $(document).ready(function () {
 
-    var animating = false;
-    var cardsCounter = 0;
-    var numOfCards = 6;
-    var decisionVal = 80;
-    var ecisionVal = -80;
-    var pullDeltaX = 0;
-    var ullDeltaX = 0;
-    var deg = 0;
-    var $card, $cardReject, $cardLike;
-    var i = 0;
+    let animating = false;
+    let cardsCounter = 0;
+    let numOfCards = 6;
+    let decisionVal = 80;
+    let pullDeltaX = 0;
+    let ullDeltaX = 0;
+    let deg = 0;
+    let $card, $cardReject, $cardLike;
+    let i = 0;
 
     //smily/sad face showing after pull
     function pullChange() {
@@ -18,12 +17,12 @@ $(document).ready(function () {
         deg = pullDeltaX / 10;
         $card.css("transform", "translateX(" + pullDeltaX + "px) rotate(" + deg + "deg)");
 
-        var opacity = pullDeltaX / 100;
-        var rejectOpacity = (opacity >= 0) ? 0 : Math.abs(opacity);
-        var likeOpacity = (opacity <= 0) ? 0 : opacity;
+        let opacity = pullDeltaX / 100;
+        let rejectOpacity = (opacity >= 0) ? 0 : Math.abs(opacity);
+        let likeOpacity = (opacity <= 0) ? 0 : opacity;
         $cardReject.css("opacity", rejectOpacity);
         $cardLike.css("opacity", likeOpacity);
-    };
+    }
 
 
     function release() {
@@ -58,7 +57,7 @@ $(document).ready(function () {
             pullDeltaX = 0;
             animating = false;
         }, 300);
-    };
+    }
 
 
     $(document).on("mousedown touchstart", ".demo__card:not(.inactive)", function (e) {
@@ -68,7 +67,7 @@ $(document).ready(function () {
         $card = $(this);
         $cardReject = $(".demo__card__choice.m--reject", $card);
         $cardLike = $(".demo__card__choice.m--like", $card);
-        var startX = e.pageX || e.originalEvent.touches[0].pageX;
+        let startX = e.pageX || e.originalEvent.touches[0].pageX;
 
         $(document).on("mousemove touchmove", function (e) {
             var x = e.pageX || e.originalEvent.touches[0].pageX;
@@ -133,4 +132,25 @@ $(document).ready(function () {
 
 });
 
+
+
+function makeCard(){
+    var myvar = '<div class="demo__card">'+
+    '                    <header class="demo__header">'+
+    '                        <h1 class="enviro">Environment</h1>'+
+    '                    </header>'+
+    '                    <div class="demo__card__top brown">'+
+    '                        <div class="demo__card__img6 demo__card__blur"></div>'+
+    '                        <p class="demo__card__name blur_name">Donald</p>'+
+    '                    </div>'+
+    '                    <div class="demo__card__btm">'+
+    '                        <p class="demo__card__we">Whatever</p>'+
+    '                    </div>'+
+    '                    <div class="demo__card__choice m--reject"></div>'+
+    '                    <div class="demo__card__choice m--like"></div>'+
+    '                    <div class="demo__card__drag"></div>'+
+    '                </div>';
+
+
+}
 
